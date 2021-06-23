@@ -1,9 +1,12 @@
 import NavBar from '../components/NavBar'
 
-export default function Home() {
+function USMFStake() {
     return (
         <>
             <NavBar />
+            <h1>USMF Stake</h1>
         </>
     )
 }
+
+export default USMFStake

@@ -1,0 +1,7 @@
+.navbar header {
+    background-color: transparent;
+}
+
+.navbar header.scroll {
+    background-color: #f7a417;
+}
