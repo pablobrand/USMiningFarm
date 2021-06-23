@@ -11,6 +11,7 @@ function NavList() {
         <nav className={navListStyles.nav}>
             <Button
                 variant="text"
+                className={navListStyles}
                 style={{
                     backgroundImage: `${path === '/' ? buttonGradient : ''}`
                 }}>
