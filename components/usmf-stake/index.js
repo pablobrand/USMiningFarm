@@ -1,18 +1,14 @@
 /* eslint-disable react/button-has-type */
 import ValueSection from './ValueSection'
 import TableSection from './table-section'
+import USMFBanner from '../USMFBanner'
 
 function USMFStakeComponent() {
     return (
         <div>
-            {/* <!-- banner section start --> */}
-            <section className="banner__black__usmf" />
-            {/* <!-- banner section end --> */}
+            <USMFBanner />
             <ValueSection />
-
-            {/* <!-- Table-section --> */}
             <TableSection />
-            {/* <!-- Table-section --> */}
         </div>
     )
 }

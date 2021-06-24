@@ -1,15 +1,12 @@
 import Script from 'next/script'
 import TableSection from './table-section'
 import DepositModal from './DepositModal'
+import USMFBanner from '../USMFBanner'
 
 function AllNetworkComponent() {
     return (
         <div>
-            {/* <!-- banner section start --> */}
-            <section className="banner__black__usmf" />
-            {/* <!-- banner section end --> */}
-
-            {/* <!-- Table-section --> */}
+            <USMFBanner />
             <TableSection />
             <DepositModal />
             <Script strategy="afterInteractive">
