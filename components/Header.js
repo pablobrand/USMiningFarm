@@ -27,7 +27,8 @@ function NavBar() {
                     backgroundColor: bgColor,
                     transition: 'all 0.3s ease-out',
                     boxShadow: 'none'
-                }}>
+                }}
+            >
                 <Toolbar style={{ justifyContent: 'space-between' }}>
                     <div className={headerStyles.columnStart}>
                         <Image src="/logo.png" layout="fixed" width={60} height={60} />

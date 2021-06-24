@@ -7,7 +7,8 @@ const DepositModal = () => {
                 tabIndex="-1"
                 role="dialog"
                 aria-labelledby="myModalLabel"
-                aria-hidden="true">
+                aria-hidden="true"
+            >
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header border-0">
@@ -15,7 +16,8 @@ const DepositModal = () => {
                                 type="button"
                                 className="text-white close"
                                 data-dismiss="modal"
-                                aria-label="Close">
+                                aria-label="Close"
+                            >
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -30,7 +32,8 @@ const DepositModal = () => {
                             />
                             <button
                                 type="button"
-                                className="review-button font-weight-bold d-block border-0">
+                                className="review-button font-weight-bold d-block border-0"
+                            >
                                 {' '}
                                 REVIEW DEPOSIT
                             </button>

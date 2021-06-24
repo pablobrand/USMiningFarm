@@ -3,12 +3,13 @@ import Script from 'next/script'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import 'bootstrap/dist/css/bootstrap.css'
 import '../public/assets/css/style.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import MetaMaskProvider from '../functions/metamask/MetamaskContext'
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <MetaMaskProvider {...pageProps}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
@@ -34,7 +35,7 @@ function MyApp({ Component, pageProps }) {
                 strategy="beforeInteractive"
             />
             <Script src="/assets/js/other.js" />
-        </>
+        </MetaMaskProvider>
     )
 }
 
