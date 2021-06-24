@@ -1,5 +1,9 @@
+import { metamaskHandler } from '../../functions/metamask/metamask'
+import { useMetaMask } from '../../functions/metamask/MetamaskContext'
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const HomeModal = () => {
+    const { metamaskState } = useMetaMask()
     return (
         <>
             <div className="col-md-6 col-xs-12 col-sm-12">
@@ -23,13 +27,32 @@ const HomeModal = () => {
                             </div>
                             <div className="modal-body">
                                 <img src="assets/images/wallet-modal.png" alt="" />
-                                <h1 className="text-center text-white"> CONNECT TO WALLET </h1>
+                                <h1 className="text-center text-white">
+                                    {' '}
+                                    {metamaskState.isMetamaskInstalled && 'CONNECT TO WALLET'}
+                                    {!metamaskState.isMetamaskInstalled &&
+                                        'Click here to install MetaMask'}
+                                </h1>
                                 <p className="text-center text-white">
                                     {' '}
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
                                     commodo ligula eget dolor.
                                 </p>
-                                <img src="assets/images/metamask.png" alt="" />
+                                <button
+                                    type="button"
+                                    style={{
+                                        background: 'none',
+                                        outline: 'none',
+                                        border: 'none',
+                                        cursor: 'pointer',
+                                        display: 'block',
+                                        margin: '0 auto'
+                                    }}
+                                    onClick={() =>
+                                        metamaskHandler(metamaskState.isMetamaskInstalled)
+                                    }>
+                                    <img src="assets/images/metamask.png" alt="" />
+                                </button>
                                 <a href="#" className="text-white m-auto text-center d-block">
                                     {' '}
                                     Help{' '}
