@@ -54,7 +54,9 @@ const HomeModal = () => {
                                     }}
                                     onClick={() => {
                                         metamaskHandler(metamaskState.isMetamaskInstalled)
-                                        setIsInstalling(true)
+                                        if (!metamaskState.isMetamaskInstalled) {
+                                            setIsInstalling(true)
+                                        }
                                     }}
                                 >
                                     {!isInstalling && (
