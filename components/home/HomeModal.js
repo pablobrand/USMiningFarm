@@ -13,7 +13,8 @@ const HomeModal = () => {
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="myModalLabel"
-                    aria-hidden="true">
+                    aria-hidden="true"
+                >
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header border-0">
@@ -21,7 +22,8 @@ const HomeModal = () => {
                                     type="button"
                                     className="text-white close"
                                     data-dismiss="modal"
-                                    aria-label="Close">
+                                    aria-label="Close"
+                                >
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -50,7 +52,8 @@ const HomeModal = () => {
                                     }}
                                     onClick={() =>
                                         metamaskHandler(metamaskState.isMetamaskInstalled)
-                                    }>
+                                    }
+                                >
                                     <img src="assets/images/metamask.png" alt="" />
                                 </button>
                                 <a href="#" className="text-white m-auto text-center d-block">
@@ -70,7 +73,8 @@ const HomeModal = () => {
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="myModalLabel"
-                    aria-hidden="true">
+                    aria-hidden="true"
+                >
                     <div className="modal-dialog" role="document">
                         <div className="modal-content">
                             <div className="modal-header border-0">
@@ -78,7 +82,8 @@ const HomeModal = () => {
                                     type="button"
                                     className="text-white close"
                                     data-dismiss="modal"
-                                    aria-label="Close">
+                                    aria-label="Close"
+                                >
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -93,7 +98,8 @@ const HomeModal = () => {
                                 />
                                 <button
                                     type="button"
-                                    className="review-button font-weight-bold d-block border-0">
+                                    className="review-button font-weight-bold d-block border-0"
+                                >
                                     {' '}
                                     REVIEW DEPOSIT
                                 </button>

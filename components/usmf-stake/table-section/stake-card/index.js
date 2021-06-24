@@ -31,7 +31,8 @@ const StakeCard = () => {
                     <div className="col-md-6 col-6">
                         <p
                             style={{ color: '#8e353c' }}
-                            className="mb-0 text-right font-weight-bold">
+                            className="mb-0 text-right font-weight-bold"
+                        >
                             {' '}
                             0 OM{' '}
                         </p>
@@ -66,7 +67,8 @@ const StakeCard = () => {
                     <div className="col-md-6 col-6">
                         <p
                             className="mb-0 text-right font-weight-bold"
-                            style={{ color: '#8e353c' }}>
+                            style={{ color: '#8e353c' }}
+                        >
                             {' '}
                             9 OM{' '}
                         </p>
@@ -80,7 +82,8 @@ const StakeCard = () => {
                     <div className="col-md-6 col-6">
                         <p
                             style={{ color: '#8e353c' }}
-                            className="mb-0 text-right font-weight-bold">
+                            className="mb-0 text-right font-weight-bold"
+                        >
                             {' '}
                             21/02/2024{' '}
                         </p>

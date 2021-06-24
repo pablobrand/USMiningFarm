@@ -14,21 +14,24 @@ function NavList() {
                 className={navListStyles}
                 style={{
                     backgroundImage: `${path === '/' ? buttonGradient : ''}`
-                }}>
+                }}
+            >
                 <Link href="/">HOME</Link>
             </Button>
             <Button
                 variant="text"
                 style={{
                     backgroundImage: `${path === '/usmf-stake' ? buttonGradient : ''}`
-                }}>
+                }}
+            >
                 <Link href="/usmf-stake">USMF STAKE</Link>
             </Button>
             <Button
                 variant="text"
                 style={{
                     backgroundImage: `${path === '/all-network' ? buttonGradient : ''}`
-                }}>
+                }}
+            >
                 <Link href="/all-network">LP STAKE</Link>
             </Button>
         </nav>

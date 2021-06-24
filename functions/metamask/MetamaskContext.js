@@ -22,7 +22,8 @@ export default function MetaMaskProvider({ children }) {
             value={{
                 metamaskState,
                 metamaskDispatch
-            }}>
+            }}
+        >
             {children}
         </MetaMask.Provider>
     )

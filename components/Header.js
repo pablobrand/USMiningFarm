@@ -26,7 +26,8 @@ function NavBar() {
                     backgroundColor: bgColor,
                     transition: 'all 0.3s ease-out',
                     boxShadow: 'none'
-                }}>
+                }}
+            >
                 <Toolbar style={{ justifyContent: 'space-between' }}>
                     <Image src="/logo.png" layout="fixed" width={60} height={60} />
                     <NavList />
