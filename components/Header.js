@@ -4,6 +4,7 @@ import Image from 'next/image'
 import NavList from './NavList'
 import MobileMenu from './MobileMenuButton'
 import NavAccount from './NavAccount'
+import headerStyles from '../styles/Header.module.css'
 
 function NavBar() {
     const [bgColor, setbgColor] = useState('transparent')
@@ -28,10 +29,16 @@ function NavBar() {
                     boxShadow: 'none'
                 }}>
                 <Toolbar style={{ justifyContent: 'space-between' }}>
-                    <Image src="/logo.png" layout="fixed" width={60} height={60} />
-                    <NavList />
+                    <div className={headerStyles.columnStart}>
+                        <Image src="/logo.png" layout="fixed" width={60} height={60} />
+                    </div>
+                    <div className={headerStyles.columnCenter}>
+                        <NavList />
+                    </div>
                     <MobileMenu />
-                    <NavAccount />
+                    <div className={headerStyles.columnEnd}>
+                        <NavAccount />
+                    </div>
                 </Toolbar>
             </AppBar>
         </Container>

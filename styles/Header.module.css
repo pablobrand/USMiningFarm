@@ -1,0 +1,17 @@
+.columnCenter {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.columnStart {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.columnEnd {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
