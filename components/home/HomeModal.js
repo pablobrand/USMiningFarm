@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { metamaskHandler } from '../../functions/metamask/metamask'
 import { useMetaMask } from '../../functions/metamask/MetamaskContext'
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const HomeModal = () => {
+    const [isInstalling, setIsInstalling] = useState(false)
     const { metamaskState } = useMetaMask()
     return (
         <>
@@ -50,11 +52,15 @@ const HomeModal = () => {
                                         display: 'block',
                                         margin: '0 auto'
                                     }}
-                                    onClick={() =>
+                                    onClick={() => {
                                         metamaskHandler(metamaskState.isMetamaskInstalled)
-                                    }
+                                        setIsInstalling(true)
+                                    }}
                                 >
-                                    <img src="assets/images/metamask.png" alt="" />
+                                    {!isInstalling && (
+                                        <img src="assets/images/metamask.png" alt="" />
+                                    )}
+                                    {isInstalling && <h1>Installing...</h1>}
                                 </button>
                                 <a href="#" className="text-white m-auto text-center d-block">
                                     {' '}
