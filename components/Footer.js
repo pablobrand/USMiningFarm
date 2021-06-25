@@ -1,4 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from '../styles/Footer.module.css'
+
 const Footer = () => {
     return (
         <>
@@ -6,26 +10,35 @@ const Footer = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-3 col-xs-12 col-sm-12">
-                            <img
+                            <Image
                                 className="footer-logo"
-                                src="assets/images/footer-logo.png"
-                                alt=""
+                                src="/assets/images/footer-logo.png"
+                                width={120}
+                                height={120}
                             />
                         </div>
                         <div className="col-md-2 col-xs-12 col-sm-12">
                             <ul>
                                 <h5> Company </h5>
                                 <li>
-                                    <a href="#"> Home </a>
+                                    <Link href="#">
+                                        <a> Home </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#"> About Us </a>
+                                    <Link href="#">
+                                        <a> About Us </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#"> Support </a>
+                                    <Link href="#">
+                                        <a> Support </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#"> Blog </a>
+                                    <Link href="#">
+                                        <a> Blog </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -33,14 +46,20 @@ const Footer = () => {
                             <ul>
                                 <h5> Get in Touch </h5>
                                 <li>
-                                    <a href="#"> info@usmf.com </a>
+                                    <Link href="#">
+                                        <a> info@usmf.com </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="#"> sales@usmf.com </a>
+                                    <Link href="#">
+                                        <a> sales@usmf.com </a>
+                                    </Link>
                                 </li>
                                 <h5 className="press"> Press </h5>
                                 <li>
-                                    <a href="#"> press@usmf.com </a>
+                                    <Link href="#">
+                                        <a> press@usmf.com </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -54,10 +73,10 @@ const Footer = () => {
                                 <button type="submit"> Subscribe </button>
                             </form>
 
-                            <div className="social-icon-footer mt-4">
-                                <img src="assets/images/in.png" alt="" />
-                                <img src="assets/images/tw.png" alt="" />
-                                <img src="assets/images/fb.png" alt="" />
+                            <div className={`social-icon-footer mt-4 ${styles.img}`}>
+                                <Image src="/assets/images/in.png" width={30} height={30} />
+                                <Image src="/assets/images/tw.png" width={30} height={30} />
+                                <Image src="/assets/images/fb.png" width={30} height={30} />
                             </div>
                         </div>
                     </div>
@@ -71,15 +90,13 @@ const Footer = () => {
                             <p className="text-white"> © 2021 usmf. All rights reserved. </p>
                         </div>
                         <div className="col-md-6 col-xs-12 col-sm-12">
-                            <p className="text-right">
-                                <a href="#" className="text-white">
-                                    {' '}
-                                    Privacy Policy{' '}
-                                </a>{' '}
-                                <a className="text-white" href="#">
-                                    {' '}
-                                    | FAQ{' '}
-                                </a>{' '}
+                            <p className="text-right text-white">
+                                <Link href="#">
+                                    <a className="text-white"> Privacy Policy </a>
+                                </Link>
+                                <Link href="#">
+                                    <a className="text-white">| FAQ </a>
+                                </Link>{' '}
                             </p>
                         </div>
                     </div>

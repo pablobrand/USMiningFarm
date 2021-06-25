@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import style from '../../../../styles/usmf-stake/TableItem.module.css'
 
 const TableItem = ({
     initialStatus = 'active',
@@ -7,7 +8,7 @@ const TableItem = ({
     initialCurrentVoted = '0 OM'
 }) => {
     return (
-        <tbody className="text-white">
+        <tbody className={`text-white ${style.tbody}`}>
             <tr className="bg-grey-type">
                 <td className="ml-4 d-flex">
                     {' '}
