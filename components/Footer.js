@@ -6,10 +6,10 @@ import styles from '../styles/Footer.module.css'
 const Footer = () => {
     return (
         <>
-            <div className="footer">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-3 col-xs-12 col-sm-12">
+            <div className={styles.footer}>
+                <div className={styles.footerContainer}>
+                    <div className={styles.row}>
+                        <div className={styles.col3}>
                             <Image
                                 className="footer-logo"
                                 src="/assets/images/footer-logo.png"
@@ -17,7 +17,7 @@ const Footer = () => {
                                 height={120}
                             />
                         </div>
-                        <div className="col-md-2 col-xs-12 col-sm-12">
+                        <div className={styles.col2}>
                             <ul>
                                 <h5> Company </h5>
                                 <li>
@@ -42,7 +42,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-3 col-xs-12 col-sm-12">
+                        <div className={styles.col2}>
                             <ul>
                                 <h5> Get in Touch </h5>
                                 <li>
@@ -55,7 +55,7 @@ const Footer = () => {
                                         <a> sales@usmf.com </a>
                                     </Link>
                                 </li>
-                                <h5 className="press"> Press </h5>
+                                <h5 className={styles.press}> Press </h5>
                                 <li>
                                     <Link href="#">
                                         <a> press@usmf.com </a>
@@ -63,7 +63,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-4 col-xs-12 col-sm-12">
+                        <div className={styles.col4}>
                             <ul>
                                 <h5> Subscribe to Our Newsletter </h5>
                             </ul>
@@ -83,13 +83,13 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="border-line">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-6 col-xs-12 col-sm-12">
+            <div className={styles.creditContainer}>
+                <div className={styles.footerContainer}>
+                    <div className={styles.creditRow}>
+                        <div>
                             <p className="text-white"> © 2021 usmf. All rights reserved. </p>
                         </div>
-                        <div className="col-md-6 col-xs-12 col-sm-12">
+                        <div>
                             <p className="text-right text-white">
                                 <Link href="#">
                                     <a className="text-white"> Privacy Policy </a>

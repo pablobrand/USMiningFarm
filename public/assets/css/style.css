@@ -125,70 +125,6 @@ a {
 
 /*----- header-end  -----*/
 
-
-/*----footer---*/
-
-.footer {
-    padding: 3rem;
-    background-color: #020202;
-    margin: 0rem auto;
-    margin-bottom: 0;
-}
-
-.footer .footer-logo {
-    width: 120px;
-}
-
-.footer ul {
-    margin: 10px;
-    list-style: none;
-}
-
-.footer h5 {
-    color: #fff;
-    margin-left: -0.65rem;
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer p {
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-}
-
-.footer ul li {
-    padding: 10px;
-    padding-bottom: 0;
-}
-
-.footer ul li a {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    text-decoration: none !important;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.footer .press {
-    margin: 10px -8px;
-    margin-bottom: 0;
-}
-
-.footer ul li a:before {
-    margin-left: -18px;
-    margin-top: 0.75em;
-    content: "";
-    position: absolute;
-    background-color: #b8374d;
-    border: 3px solid #b8374d;
-    border-radius: 50px;
-    width: 6.5px;
-    height: 6.5px;
-}
-
-
-/*----footer-end----*/
-
-
 /* --- banner-section ---- */
 
 .banner__black__images {
@@ -344,7 +280,7 @@ a {
     background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
     border-radius: 40px;
     position: absolute;
-    right: 15px;
+    right: 45px;
     outline: none !important;
     font-family: 'Poppins', sans-serif;
 }
