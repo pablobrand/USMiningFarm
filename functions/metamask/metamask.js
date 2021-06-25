@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+// eslint-disable-next-line import/no-unresolved
 import MetaMaskOnboarding from '@metamask/onboarding'
 
 export const isMetamaskInstalled = () => {
@@ -18,6 +19,7 @@ const metamaskConnect = async () => {
             method: 'eth_requestAccounts'
         })
     } catch (error) {
+        // eslint-disable-next-line no-console
         console.error(error)
     }
 }

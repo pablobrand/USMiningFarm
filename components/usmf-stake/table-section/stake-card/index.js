@@ -1,4 +1,5 @@
 /* eslint-disable react/button-has-type */
+
 const StakeCard = () => {
     return (
         <div className="col-md-4 col-xs-12 col-xs-12">

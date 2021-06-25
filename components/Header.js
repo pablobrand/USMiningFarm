@@ -1,49 +1,37 @@
-import { useState, useEffect } from 'react'
-import { AppBar, Toolbar, Container } from '@material-ui/core'
 import Image from 'next/image'
-import NavList from './NavList'
-import MobileMenu from './MobileMenuButton'
-import NavAccount from './NavAccount'
-import headerStyles from '../styles/Header.module.css'
+import NavBar from './NavBar'
 
-function NavBar() {
-    const [bgColor, setbgColor] = useState('transparent')
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', () => {
-                // eslint-disable-next-line no-unused-expressions
-                window.pageYOffset > 10 ? setbgColor('#f7a417') : setbgColor('transparent')
-            })
-        }
-    }, [])
-
+function Header() {
     return (
-        <Container maxWidth="md">
-            <AppBar
-                style={{
-                    minHeight: 86,
-                    justifyContent: 'center',
-                    backgroundColor: bgColor,
-                    transition: 'all 0.3s ease-out',
-                    boxShadow: 'none'
-                }}
-            >
-                <Toolbar style={{ justifyContent: 'space-between' }}>
-                    <div className={headerStyles.columnStart}>
-                        <Image src="/logo.png" layout="fixed" width={60} height={60} />
+        <div className="navigation-wrap start-header start-style" id="banner">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12 col-xs-12 col-sm-12">
+                        <nav className="navbar navbar-expand-md navbar-dark">
+                            <a className="navbar-brand" href="index.html" target="_blank">
+                                <div className="logo_div">
+                                    <Image src="/assets/images/logo.png" width={60} height={60} />
+                                </div>
+                            </a>
+
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span className="navbar-toggler-icon" />
+                            </button>
+                            <NavBar />
+                        </nav>
                     </div>
-                    <div className={headerStyles.columnCenter}>
-                        <NavList />
-                    </div>
-                    <MobileMenu />
-                    <div className={headerStyles.columnEnd}>
-                        <NavAccount />
-                    </div>
-                </Toolbar>
-            </AppBar>
-        </Container>
+                </div>
+            </div>
+        </div>
     )
 }
 
-export default NavBar
+export default Header

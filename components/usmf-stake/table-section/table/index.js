@@ -5,12 +5,7 @@ const Table = () => {
     return (
         <table className="margin-30 width-85 table table-responsive">
             <TableHead />
-            <TableItem
-                initialStatus="active"
-                initialEstimatedRewards="35.30%"
-                initialTimeTillMaturity="02:01 - 21-05-2021"
-                initialCurrentVoted="0 OM"
-            />
+            <TableItem />
             <TableItem
                 initialStatus="VOTING"
                 initialEstimatedRewards="35.30%"

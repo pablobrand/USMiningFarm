@@ -20,8 +20,7 @@ const TableSection = () => {
                                 <button
                                     className="text-white font-weight-bold btn dropdown-toggle"
                                     type="button"
-                                    data-toggle="dropdown"
-                                >
+                                    data-toggle="dropdown">
                                     ALL NETWORKS
                                     <span className="caret" />
                                 </button>
