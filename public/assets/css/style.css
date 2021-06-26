@@ -260,6 +260,10 @@ a {
     }
 }
 
+.search-wrapper {
+    position: relative;
+}
+
 .search-wrapper input {
     width: 100%;
     height: 43px;
@@ -280,7 +284,7 @@ a {
     background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
     border-radius: 40px;
     position: absolute;
-    right: 45px;
+    right: 0;
     outline: none !important;
     font-family: 'Poppins', sans-serif;
 }
