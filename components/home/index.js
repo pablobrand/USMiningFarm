@@ -5,8 +5,7 @@ import NetworkSection from './network-section'
 // import HomeModal from './HomeModal'
 
 const HomeModal = dynamic(() => import('./HomeModal'), {
-    loader: <div />,
-    ssr: false
+    loading: () => <div />
 })
 
 export default function HomeComponent() {
