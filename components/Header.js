@@ -8,7 +8,7 @@ function Header() {
                 <div className="row">
                     <div className="col-md-12 col-xs-12 col-sm-12">
                         <nav className="navbar navbar-expand-md navbar-dark">
-                            <a className="navbar-brand" href="index.html" target="_blank">
+                            <a className="navbar-brand" href="/" target="_blank">
                                 <div className="logo_div">
                                     <Image src="/assets/images/logo.png" width={60} height={60} />
                                 </div>
