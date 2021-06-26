@@ -1,8 +1,10 @@
+import Image from 'next/image'
+
 const AboutSection = () => {
     return (
         <div className="row about-section-row">
             <div className="col-md-6 col-xs-12 col-sm-12">
-                <img className="w-100" src="assets/images/about-imag.png" alt="" />
+                <Image className="w-100" src="assets/images/about-imag.png" alt="" />
             </div>
             <div className="col-md-6 col-xs-12 col-sm-12">
                 <h1 className="text-white"> ABOUT USMF </h1>
@@ -18,7 +20,7 @@ const AboutSection = () => {
                 <div className="round-bg-with-image">
                     <div className="row">
                         <div className="col-md-2 col-xs-6">
-                            <img src="assets/images/analysis.png" alt="" />
+                            <Image src="assets/images/analysis.png" alt="" />
                         </div>
                         <div className="col-md-10 col-xs-6">
                             <div className="ml-2">
@@ -36,7 +38,7 @@ const AboutSection = () => {
                 <div className="round-bg-with-image">
                     <div className="row">
                         <div className="col-md-2 col-xs-6">
-                            <img src="assets/images/credibility.png" alt="" />
+                            <Image src="assets/images/credibility.png" alt="" />
                         </div>
                         <div className="col-md-10 col-xs-6">
                             <div className="ml-2">
@@ -54,7 +56,7 @@ const AboutSection = () => {
                 <div className="round-bg-with-image">
                     <div className="row">
                         <div className="col-md-2 col-xs-6">
-                            <img src="assets/images/secure.png" alt="" />
+                            <Image src="assets/images/secure.png" alt="" />
                         </div>
                         <div className="col-md-10 col-xs-6">
                             <div className="ml-2">

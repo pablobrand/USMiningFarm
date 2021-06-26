@@ -1,7 +1,11 @@
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import BannerSection from './BannerSection'
 import NetworkSection from './network-section'
-import HomeModal from './HomeModal'
+
+const HomeModal = dynamic(() => import('./HomeModal'), {
+    loading: () => <div />
+})
 
 export default function HomeComponent() {
     return (
