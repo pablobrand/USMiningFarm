@@ -89,10 +89,12 @@ a {
     }
 }
 
-.sticky {
-    background-color: #f7a417;
+@media screen and (min-width: 768px) {
+    .sticky {
+        background-color: #f7a417 !important;
+    }
+    
 }
-
 
 /*---------------*/
 
