@@ -129,9 +129,10 @@ a {
 
 .banner__black__images {
     background-image: url('../images/banner.png');
-    background-size: 100%;
+    /* background-size: 100%; */
+    background-position: 80%;
     background-repeat: no-repeat;
-    height: 750px;
+    height: 925px;
 }
 
 .banner__black__images .position-set {
@@ -598,7 +599,13 @@ td {
     .banner__black__images,
     .banner__black__usmf {
         background-size: cover;
+        background-position: unset;
     }
+
+    .banner__black__images {
+        height: 750px;
+    }
+
     .banner__black__images .position-set {
         top: 130px;
     }
@@ -637,5 +644,11 @@ td {
         float: initial;
         margin: 10px auto !important;
         display: block !important;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .banner__black__images {
+        background-size: 100%;
     }
 }
