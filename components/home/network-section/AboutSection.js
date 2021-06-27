@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import AboutBlurb from './AboutBlurb'
 
 const AboutSection = () => {
     return (
@@ -23,69 +24,22 @@ const AboutSection = () => {
                     eu, pretium quis, sem. Nulla consequat massa quis enim.{' '}
                 </p>
 
-                <div className="round-bg-with-image">
-                    <div className="row">
-                        <div className="col-md-2 col-xs-6">
-                            <Image
-                                src="/assets/images/analysis.png"
-                                alt=""
-                                width={80}
-                                height={80.55}
-                            />
-                        </div>
-                        <div className="col-md-10 col-xs-6">
-                            <div className="ml-2">
-                                <h4 className="font-weight-bold text-white"> SECURE USER DATA </h4>
-                                <p className="text-white medium-text">
-                                    {' '}
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa{' '}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AboutBlurb
+                    heading="SECURE USER DATA"
+                    text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa"
+                />
 
-                <div className="round-bg-with-image">
-                    <div className="row">
-                        <div className="col-md-2 col-xs-6">
-                            <Image
-                                src="/assets/images/credibility.png"
-                                alt=""
-                                width={80}
-                                height={81.11}
-                            />
-                        </div>
-                        <div className="col-md-10 col-xs-6">
-                            <div className="ml-2">
-                                <h4 className="font-weight-bold text-white"> MOST CREADIBILITY </h4>
-                                <p className="text-white medium-text">
-                                    {' '}
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa{' '}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AboutBlurb
+                    image="/assets/images/credibility.png"
+                    heading="MOST CREADIBILITY"
+                    text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa"
+                />
 
-                <div className="round-bg-with-image">
-                    <div className="row">
-                        <div className="col-md-2 col-xs-6">
-                            <Image src="/assets/images/secure.png" alt="" width={80} height={80} />
-                        </div>
-                        <div className="col-md-10 col-xs-6">
-                            <div className="ml-2">
-                                <h4 className="font-weight-bold text-white"> BIG DATA INSIGHTS </h4>
-                                <p className="text-white medium-text">
-                                    {' '}
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor. Aenean massa{' '}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AboutBlurb
+                    image="/assets/images/secure.png"
+                    heading="BIG DATA INSIGHTS"
+                    text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa"
+                />
             </div>
         </div>
     )
