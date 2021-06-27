@@ -89,13 +89,6 @@ a {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .sticky {
-        background-color: #f7a417 !important;
-    }
-    
-}
-
 /*---------------*/
 
 .navbar-brand .logo_div {
@@ -122,6 +115,10 @@ a {
 
 .right-nav .button-section img {
     width: 25px;
+}
+
+.sticky {
+    background-color: #f7a417 !important;
 }
 
 /*----- header-end  -----*/
