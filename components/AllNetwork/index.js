@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import TableSection from './table-section'
+import TableSection from './TableSection'
 import DepositModal from './DepositModal'
 import USMFBanner from '../USMFBanner'
 

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
-import Table from './table'
+import Table from './Table'
 
 const TableSection = () => {
     return (
