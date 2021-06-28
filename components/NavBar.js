@@ -43,8 +43,8 @@ function NavBar() {
                     <a className="nav-link text-white" href="#">
                         {' '}
                         <img className="mr-2" src="assets/images/account-icon.png" alt="" />
-                        {walletAccount && 'Connect Wallet'}
-                        {!walletAccount && 'OCXA12........6665'}
+                        {!walletAccount && 'Connect Wallet'}
+                        {walletAccount && 'OCXA12........6665'}
                     </a>
                 </li>
             </ul>
