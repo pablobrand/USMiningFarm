@@ -1,4 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/button-has-type */
+import DepositModal from '../../DepositModal'
+
 const TableItem = () => {
+    const showModal = () => {
+        $(document).ready(function () {
+            $('#myModal3').modal('show')
+        })
+    }
+
     return (
         <div className="mt-4">
             <div className="row m-0">
@@ -24,11 +34,12 @@ const TableItem = () => {
                                     CURRENT USMF APR{' '}
                                 </h3>
                                 <div className="padding--setting">
-                                    <input
-                                        type="text"
+                                    <button
                                         className="custom-input"
-                                        placeholder="DEPOSIT USMF LP"
-                                    />
+                                        onClick={(event) => showModal(event)}
+                                    >
+                                        DEPOSIT USMF LP
+                                    </button>
                                     <div className="validation"> EARN 11.35% APR IN POOL </div>
                                 </div>
                             </div>
@@ -36,6 +47,7 @@ const TableItem = () => {
                     </div>
                 </div>
             </div>
+            <DepositModal id={3} />
         </div>
     )
 }

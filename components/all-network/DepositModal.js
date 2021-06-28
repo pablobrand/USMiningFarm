@@ -1,9 +1,9 @@
-const DepositModal = () => {
+const DepositModal = ({ id }) => {
     return (
         <div className="col-md-6 col-xs-12 col-sm-12">
             <div
                 className="modal fade"
-                id="myModal3"
+                id={`myModal${id}`}
                 tabIndex="-1"
                 role="dialog"
                 aria-labelledby="myModalLabel"
