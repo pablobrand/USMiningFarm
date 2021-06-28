@@ -1,0 +1,195 @@
+.stakeCard {
+    width: 550px;
+}
+
+.stakeCardBG {
+    background-color: #212121;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.stakeCardType {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.stakeCardBalance {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.stakeCardTotalStake {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.stakeCardInput {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.stakeCardEstimatedRewards, .stakeCardMaturityDate {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.stakeCardButton {
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    font-weight: 600;
+    padding: 8px 35px;
+    margin: 2rem auto;
+    outline: none !important;
+    display: block;
+    width: 70%;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.stakeCardType h2 {
+    font-weight: 700;
+    padding-left: 1rem;
+    margin-bottom: 0;
+    color: #8e353c;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.stakeCardBalanceLabel,
+.stakeCardBalanceAmount, 
+.stakeCardTotalStakeLabel, 
+.stakeCardTotalStakeAmount,
+.stakeCardInputLabel,
+.stakeCardInputArea,
+.stakeCardEstimatedRewardsLabel,
+.stakeCardEstimatedRewardsAmount,
+.stakeCardMaturityDateLabel,
+.stakeCardMaturityDateAmount {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.stakeCardBalanceLabel,
+.stakeCardBalanceAmount, 
+.stakeCardTotalStakeLabel, 
+.stakeCardTotalStakeAmount,
+.stakeCardInputLabel {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.stakeCardImg, .stakeCardTypeLabel {
+    padding: 0 15px;
+}
+
+.stakeCardType h2 > span {
+    color: #fff;
+}
+
+.stakeCardBalanceAmount p, 
+.stakeCardTotalStakeAmount p,
+.stakeCardEstimatedRewardsAmount p,
+.stakeCardMaturityDateAmount p {
+    text-align: right;
+}
+
+.stakeCardBalanceAmount p, 
+.stakeCardBalanceLabel p, 
+.stakeCardTotalStakeLabel p, 
+.stakeCardInputArea h6,
+.stakeCardEstimatedRewardsLabel p,
+.stakeCardMaturityDateLabel p {
+    color: #fff;
+}
+
+.stakeCardTotalStakeAmount p,
+.stakeCardEstimatedRewardsAmount p,
+.stakeCardMaturityDateAmount p {
+    color: #8e353c;
+}
+
+.stakeCardBalanceAmount p, 
+.stakeCardBalanceLabel p, 
+.stakeCardTotalStakeLabel p, 
+.stakeCardTotalStakeAmount p,
+.stakeCardInputArea h6,
+.stakeCardEstimatedRewardsAmount p,
+.stakeCardEstimatedRewardsLabel p,
+.stakeCardMaturityDateLabel p,
+.stakeCardMaturityDateAmount p {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.stakeCardInputArea h6 {
+    margin-bottom: .5rem;
+}
+
+.stakeCardInputLabel {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.stakeCardInputLabel h5 {
+    color: #fff;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.stakeCardInputArea {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.stakeCardInputArea p {
+    margin-bottom: 0;
+    color: #aaaaaa
+}
+
+.stakeCardInputArea input {
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    outline: none !important;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #dddddd59;
+    background-color: #3a3a3a;
+}
+
+.stakeCardEstimatedRewardsLabel,
+.stakeCardEstimatedRewardsAmount,
+.stakeCardMaturityDateLabel,
+.stakeCardMaturityDateAmount {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media (max-width: 1190px) {
+    .stakeCard {
+        width: 100%;
+    }
+}
+
+
+
+
+

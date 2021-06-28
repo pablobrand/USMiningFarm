@@ -1,0 +1,16 @@
+.tableRow {
+    color: #fff;
+}
+
+.tableColumn1 {
+    text-align: center;
+    min-width: 300px;
+}
+
+.tableColumn {
+    min-width: 165px;
+}
+
+.tableColumn1, .tableColumn {
+    padding: 0 15px;
+}

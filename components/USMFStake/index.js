@@ -2,10 +2,11 @@
 import ValueSection from './ValueSection'
 import TableSection from './TableSection'
 import USMFBanner from '../USMFBanner'
+import styles from './USMFStake.module.css'
 
 function USMFStakeComponent() {
     return (
-        <div>
+        <div className={styles.container}>
             <USMFBanner />
             <ValueSection />
             <TableSection />

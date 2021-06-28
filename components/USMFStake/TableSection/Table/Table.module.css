@@ -1,0 +1,20 @@
+.table {
+    width: 66.66%;
+    margin-right: 30px;
+}
+
+.table > table {
+    margin: 30px;
+    width: 93%;
+    color: #212529;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    display: block;
+}
+
+@media (max-width: 1190px) {
+    .table {
+        width: auto;
+    }
+}

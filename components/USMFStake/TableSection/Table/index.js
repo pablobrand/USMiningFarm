@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import TableItem from './TableItem'
 import TableHead from './TableHead'
 import { useMetaMask } from '../../../../functions/metamask/MetamaskContext'
+import styles from './Table.module.css'
 
 const Table = () => {
     const { metamaskDispatch } = useMetaMask()
@@ -18,28 +19,30 @@ const Table = () => {
         })
     }, [])
     return (
-        <table className="margin-30 width-85 table table-responsive">
-            <TableHead />
-            <TableItem type={1} />
-            <TableItem
-                type={2}
-                initialStatus="VOTING"
-                initialEstimatedRewards="35.30%"
-                initialTimeTillMaturity="02:01 - 22-05-2021"
-                initialTimeTillMaturityDate="22-05-2021"
-                initialCurrentVoted="2 RFUEL"
-                initialCurrentTotalStake={1.0}
-            />
-            <TableItem
-                type={3}
-                initialStatus="LOCKED"
-                initialEstimatedRewards="35.30%"
-                initialTimeTillMaturity="02:01 - 23-05-2021"
-                initialTimeTillMaturityDate="23-05-2021"
-                initialCurrentVoted="3 OM"
-                initialCurrentTotalStake={2.0}
-            />
-        </table>
+        <div className={styles.table}>
+            <table>
+                <TableHead />
+                <TableItem type={1} />
+                <TableItem
+                    type={2}
+                    initialStatus="VOTING"
+                    initialEstimatedRewards="35.30%"
+                    initialTimeTillMaturity="02:01 - 22-05-2021"
+                    initialTimeTillMaturityDate="22-05-2021"
+                    initialCurrentVoted="2 RFUEL"
+                    initialCurrentTotalStake={1.0}
+                />
+                <TableItem
+                    type={3}
+                    initialStatus="LOCKED"
+                    initialEstimatedRewards="35.30%"
+                    initialTimeTillMaturity="02:01 - 23-05-2021"
+                    initialTimeTillMaturityDate="23-05-2021"
+                    initialCurrentVoted="3 OM"
+                    initialCurrentTotalStake={2.0}
+                />
+            </table>
+        </div>
     )
 }
 

@@ -1,0 +1,161 @@
+.tableItem {
+     margin-top: 1.5rem;
+}
+
+.tableItemRow {
+    display: flex;
+}
+
+.tableItemColumn1 {
+    width: 33.33%;
+}
+
+.tableItemColumn2 {
+    width: 66.66%
+}
+
+.tableItemLabel {
+    display: flex;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    padding: 2rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.tableItemLabel h1, .tableItemLabel h3 {
+    color: #fff;
+}
+
+.tableItemLabel h1 {
+    width: 66.66%;
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+.tableItemImg {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.tableItemImg > div {
+    width: 100px;
+}
+
+.tableItemImg h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.tableItemInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 100%;
+}
+
+.tableItemInput h3 {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tableItemInput > div {
+    width: 80%
+}
+
+.tableItemInput button {
+    width: 100%;
+}
+
+
+.tableItemInput > div > div {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    opacity: .7;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 1260px) {
+    .tableItemLabel {
+        flex-direction: column;
+    }
+    
+    .tableItemLabel h1{
+        padding: 0;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 950px) {
+    .tableItemRow {
+        flex-direction: column;
+    }
+
+    .tableItemLabel {
+        flex-direction: row;
+    }
+
+    .tableItemLabel h1 {
+        width: 50%;
+    }
+
+    .tableItemImg {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tableItemLabel h1{
+        padding: 0;
+        font-size: 40px;
+    }
+
+    .tableItemLabel {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: unset;
+    }
+
+    .tableItemInput {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: unset;
+    }
+
+    .tableItemLabel, .tableItemInput {
+        padding: 2rem;
+    }
+
+    .tableItemColumn1, .tableItemColumn2 {
+        width: 100%;
+    }
+
+    .tableItemInput h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 375px) {
+    .tableItemImg {
+        width: 40%;
+    }
+
+    .tableItemLabel h1 {
+        text-align: center;
+        width: 50%;
+    }
+
+    .tableItemLabel, .tableItemInput {
+        padding: 1rem;
+    }
+}

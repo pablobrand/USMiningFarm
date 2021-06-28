@@ -1,0 +1,15 @@
+.tableSection {
+    background-color: #020202;
+    flex: 1;
+}
+
+.tableSectionRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1190px) {
+    .tableSectionRow {
+        flex-direction: column;
+    }
+}
