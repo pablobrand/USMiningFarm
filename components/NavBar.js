@@ -1,9 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useMetaMask } from '../functions/metamask/MetamaskContext'
 import styles from '../styles/NavBar.module.css'
 
 function NavBar() {
+    const {
+        metamaskState: { walletAccount }
+    } = useMetaMask()
     const router = useRouter()
     const path = router.pathname
 
@@ -38,8 +42,9 @@ function NavBar() {
                 <li className="nav-item mr-1 ml-1 button-section text-center d-lg-block">
                     <a className="nav-link text-white" href="#">
                         {' '}
-                        <img className="mr-2" src="assets/images/account-icon.png" alt="" /> OCXA
-                        OCXA 12........6665
+                        <img className="mr-2" src="assets/images/account-icon.png" alt="" />
+                        {walletAccount && 'Connect Wallet'}
+                        {!walletAccount && 'OCXA12........6665'}
                     </a>
                 </li>
             </ul>

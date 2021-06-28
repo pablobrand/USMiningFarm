@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 import '../public/assets/css/style.css'
 import 'font-awesome/css/font-awesome.min.css'
@@ -16,7 +15,6 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Header />
             <Component {...pageProps} />
-            <Footer />
             <Script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
                 strategy="beforeInteractive"
@@ -33,5 +31,4 @@ function MyApp({ Component, pageProps }) {
         </MetaMaskProvider>
     )
 }
-
 export default MyApp

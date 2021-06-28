@@ -11,7 +11,7 @@ const ValueSection = () => {
                         </h2>
                     </div>
                     <div className="col-md-6 col-xs-12 col-sm-12">
-                        <button className="text-white buy-om"> BUY OM </button>
+                        <button className="text-white buy-om"> BUY USMF </button>
                     </div>
                 </div>
             </div>

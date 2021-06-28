@@ -18,9 +18,7 @@ export default function HomeComponent() {
             </section>
             <HomeModal />
             <Script strategy="afterInteractive">
-                {`$(document).ready(function() {
-                        $('#myModal3').modal('show');
-                    });
+                {`
                     $(document).ready(function() {
                         $('#myModal2').modal('show');
                     });`}

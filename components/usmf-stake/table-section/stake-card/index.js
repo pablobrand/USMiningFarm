@@ -1,6 +1,8 @@
 /* eslint-disable react/button-has-type */
+import { useMetaMask } from '../../../../functions/metamask/MetamaskContext'
 
 const StakeCard = () => {
+    const { metamaskState } = useMetaMask()
     return (
         <div className="col-md-4 col-xs-12 col-xs-12">
             <div className="bg-grey-type">
@@ -10,7 +12,7 @@ const StakeCard = () => {
                     </div>
                     <div className="col-md-10 col-xs-6 col-sm-6">
                         <h2 className="pl-3 font-weight-bold mb-0 right-side-text">
-                            TYPE1 <br />{' '}
+                            {metamaskState.stakeCardDetails.typeId} <br />{' '}
                             <span className="text-white font-weight-bold"> OM - STAKING </span>{' '}
                         </h2>
                     </div>
@@ -21,7 +23,10 @@ const StakeCard = () => {
                         <p className="mb-0 text-white font-weight-bold"> YOUR BALANCE </p>
                     </div>
                     <div className="col-md-6 col-6">
-                        <p className="mb-0 text-right font-weight-bold text-white"> 0 OM </p>
+                        <p className="mb-0 text-right font-weight-bold text-white">
+                            {' '}
+                            {metamaskState.stakeCardDetails?.currentTotalStake} OM{' '}
+                        </p>
                     </div>
                 </div>
 
@@ -35,7 +40,7 @@ const StakeCard = () => {
                             className="mb-0 text-right font-weight-bold"
                         >
                             {' '}
-                            0 OM{' '}
+                            {metamaskState.stakeCardDetails?.currentTotalStake} OM{' '}
                         </p>
                     </div>
                 </div>
@@ -86,7 +91,7 @@ const StakeCard = () => {
                             className="mb-0 text-right font-weight-bold"
                         >
                             {' '}
-                            21/02/2024{' '}
+                            {metamaskState?.stakeCardDetails?.timeTillMaturity}{' '}
                         </p>
                     </div>
                 </div>

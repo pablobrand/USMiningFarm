@@ -570,6 +570,7 @@ td {
 }
 
 .min-width-first {
+    text-align: center;
     min-width: 300px;
 }
 

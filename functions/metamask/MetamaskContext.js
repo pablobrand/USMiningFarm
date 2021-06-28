@@ -8,14 +8,19 @@ export const useMetaMask = () => {
     return useContext(MetaMask)
 }
 
-export default function MetaMaskProvider({ children }) {
-    const [metamaskState, metamaskDispatch] = useReducer(metamaskReducer, metamaskInitialState)
+export default function MetaMaskProvider({ children, metamaskData }) {
+    const [metamaskState, metamaskDispatch] = useReducer(
+        metamaskReducer,
+        metamaskData || metamaskInitialState
+    )
 
     useEffect(() => {
-        metamaskDispatch({
-            type: 'METAMASK_INSTALLED',
-            payload: isMetamaskInstalled()
-        })
+        if (!metamaskData?.isMetamaskInstalled) {
+            metamaskDispatch({
+                type: 'METAMASK_INSTALLED',
+                payload: isMetamaskInstalled()
+            })
+        }
     }, [])
     return (
         <MetaMask.Provider

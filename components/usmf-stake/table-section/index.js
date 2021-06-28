@@ -8,9 +8,9 @@ const TableSection = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-8 col-xs-12 col-xs-12">
-                        <div className="margin-30 stake-button">
+                        {/* <div className="margin-30 stake-button">
                             <button> STAKE </button>
-                        </div>
+                        </div> */}
                         <Table />
                     </div>
                     <StakeCard />

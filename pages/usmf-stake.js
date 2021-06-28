@@ -12,4 +12,16 @@ function USMFStake() {
     )
 }
 
+export async function getServerSideProps(ctx) {
+    const {
+        cookies: { metamaskData }
+    } = ctx.req
+
+    return {
+        props: {
+            metamaskData: metamaskData || null
+        }
+    }
+}
+
 export default USMFStake
