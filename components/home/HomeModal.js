@@ -39,8 +39,8 @@ const HomeModal = () => {
                                 </h1>
                                 <p className="text-center text-white">
                                     {' '}
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                                    commodo ligula eget dolor.
+                                    In order to interact with our application, as intended, please
+                                    connect to your Metamask
                                 </p>
                                 <button
                                     type="button"
