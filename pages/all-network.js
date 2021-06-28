@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import AllNetworkComponent from '../components/all-network'
+import AllNetworkComponent from '../components/AllNetwork'
 
 function AllNetwork() {
     return (

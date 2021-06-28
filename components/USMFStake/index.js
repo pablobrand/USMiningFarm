@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
 import ValueSection from './ValueSection'
-import TableSection from './table-section'
+import TableSection from './TableSection'
 import USMFBanner from '../USMFBanner'
 
 function USMFStakeComponent() {

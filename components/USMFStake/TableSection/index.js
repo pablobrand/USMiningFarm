@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
-import Table from './table'
-import StakeCard from './stake-card'
+import Table from './Table'
+import StakeCard from './StakeCard'
 
 const TableSection = () => {
     return (

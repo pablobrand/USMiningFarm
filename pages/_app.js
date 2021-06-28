@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import Script from 'next/script'
+import $ from 'jquery'
 import Header from '../components/Header'
 
 import '../public/assets/css/style.css'
@@ -8,6 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MetaMaskProvider from '../functions/metamask/MetamaskContext'
 
 function MyApp({ Component, pageProps }) {
+    useEffect(() => {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 75) {
+                $('#banner').addClass('sticky')
+            } else {
+                $('#banner').removeClass('sticky')
+            }
+        })
+    }, [])
     return (
         <MetaMaskProvider {...pageProps}>
             <Head>
@@ -27,7 +38,7 @@ function MyApp({ Component, pageProps }) {
                 src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
                 strategy="beforeInteractive"
             />
-            <Script src="/assets/js/other.js" />
+            {/* <Script src="/assets/js/other.js" /> */}
         </MetaMaskProvider>
     )
 }
