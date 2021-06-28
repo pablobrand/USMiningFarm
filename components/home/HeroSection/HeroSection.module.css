@@ -1,0 +1,50 @@
+.heroBG {
+    background-image: url('../../../public/assets/images/banner.png');
+    background-position: 80%;
+    background-repeat: no-repeat;
+    height: 925px;
+}
+
+.positionSet {
+    position: absolute;
+    top: 250px;
+}
+
+.heroBG h1 {
+    font-weight: bolder;
+    font-size: 82px;
+    line-height: 1;
+}
+
+.heroBG p {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.heroBG button {
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    font-weight: 600;
+    padding: 8px 22px;
+    margin-top: 10px;
+    outline: none !important;
+}
+
+@media (min-width: 1920px) {
+    .heroBG {
+        background-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .heroBG {
+        background-size: cover;
+        background-position: unset;
+        height: 750px;
+    }
+
+    .positionSet {
+        top: 130px;
+    }
+}

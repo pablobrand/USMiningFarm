@@ -205,10 +205,6 @@ a {
     font-size: 35px;
 }
 
-.network-section .about-section-row {
-    margin-top: 5rem;
-}
-
 .round-bg-with-image {
     border-radius: 30px 10px;
     background-color: #181818;
@@ -224,13 +220,6 @@ a {
 .round-bg-with-image .medium-text {
     font-size: 15px;
     margin-bottom: 0;
-}
-
-.about-section-row .line {
-    background: #b33b47;
-    border: 2px solid #b33b47;
-    width: 100px;
-    margin: 20px 0;
 }
 
 .triangle-4 {
@@ -693,30 +682,6 @@ td {
     font-size: 35px;
 }
 
-.about-blurb-bg {
-    display: flex;
-    background: #181818;
-    margin: 10px 0;
-    padding: 20px;
-    border-radius: 30px 10px;
-    box-shadow: 0 0 4px -1px rgb(0 0 0 / 60%);
-}
-
-.about-blurb-img {
-    width: 150px;
-    margin-right: 15px;
-}
-
-.about-blurb-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-blurb-text p {
-    margin: 0;
-}
-
 @media only screen and (max-width: 767px) {
     .usmf-row {
         display: flex;
@@ -726,14 +691,6 @@ td {
 
     .gap-30 > .usmf-column:not(:last-child) {
         margin-right: 0;
-    }
-
-    .network-img-bg {
-        width: 100%;
-    }
-
-    .about-blurb-bg {
-        flex-direction: column;
     }
 }
 

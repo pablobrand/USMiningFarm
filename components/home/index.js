@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import dynamic from 'next/dynamic'
-import BannerSection from './BannerSection'
 import NetworkSection from './NetworkSection'
+import HeroSection from './HeroSection'
 
 const HomeModal = dynamic(() => import('./HomeModal'), {
     loading: () => <div />
@@ -10,12 +10,8 @@ const HomeModal = dynamic(() => import('./HomeModal'), {
 export default function HomeComponent() {
     return (
         <>
-            <BannerSection />
-            <section className="network-section">
-                <div className="container">
-                    <NetworkSection />
-                </div>
-            </section>
+            <HeroSection />
+            <NetworkSection />
             <HomeModal />
             <Script strategy="afterInteractive">
                 {`

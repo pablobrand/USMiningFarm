@@ -1,9 +1,10 @@
 import Image from 'next/image'
-import AboutBlurb from './AboutBlurb'
+import AboutBlurb from '../AboutBlurb'
+import styles from './AboutSection.module.css'
 
 const AboutSection = () => {
     return (
-        <div className="row about-section-row">
+        <div className={`row ${styles.aboutSectionRow}`}>
             <div className="col-md-6 col-xs-12 col-sm-12">
                 <Image
                     className="w-100"
@@ -13,9 +14,9 @@ const AboutSection = () => {
                     height={546.69}
                 />
             </div>
-            <div className="col-md-6 col-xs-12 col-sm-12">
+            <div className={`col-md-6 col-xs-12 col-sm-12 ${styles.aboutSectionText}`}>
                 <h1 className="text-white"> ABOUT USMF </h1>
-                <div className="line" />
+                <div className={styles.aboutSectionTextLine} />
                 <p className="text-white">
                     {' '}
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula

@@ -1,10 +1,12 @@
-const BannerSection = () => {
+import styles from './HeroSection.module.css'
+
+const HeroSection = () => {
     return (
-        <section className="banner__black__images">
+        <section className={styles.heroBG}>
             <div className="container-fluid">
                 <div className="row pl-4 pr-4">
                     <div className="col-md-5 col-xs-12 col-sm-12">
-                        <div className="position-set">
+                        <div className={styles.positionSet}>
                             <h1 className="text-white"> LOREM IPSUM SIMPLE DUMMY </h1>
                             <p className="text-white">
                                 {' '}
@@ -25,4 +27,4 @@ const BannerSection = () => {
     )
 }
 
-export default BannerSection
+export default HeroSection

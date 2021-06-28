@@ -1,0 +1,14 @@
+.aboutSectionRow {
+    margin-top: 5rem;
+}
+
+.aboutSectionText {
+    color: #fff;
+}
+
+.aboutSectionTextLine {
+    background-color: #b33b47;
+    border: 2px solid #b33b47;
+    width: 100px;
+    margin: 20px 0;
+}

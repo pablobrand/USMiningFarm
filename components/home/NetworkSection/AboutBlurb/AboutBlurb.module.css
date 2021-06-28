@@ -1,0 +1,35 @@
+.aboutBlurbBG {
+    display: flex;
+    background: #181818;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 30px 10px;
+    box-shadow: 0 0 4px -1px rgb(0 0 0 / 60%);
+}
+
+.aboutBlurbImg {
+    width: 150px;
+    margin-right: 15px;
+}
+
+.aboutBlurbText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.aboutBlurbText h4 {
+    font-weight: 700;
+}
+
+.aboutBlurbText p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutBlurbBG {
+        flex-direction: column;
+    }
+}

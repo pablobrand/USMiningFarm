@@ -3,9 +3,11 @@ import AboutSection from './AboutSection'
 
 export default function NetworkSection() {
     return (
-        <>
-            <NetworkStats />
-            <AboutSection />
-        </>
+        <section className="network-section">
+            <div className="container">
+                <NetworkStats />
+                <AboutSection />
+            </div>
+        </section>
     )
 }
