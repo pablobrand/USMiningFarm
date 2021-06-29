@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import NetworkSection from './NetworkSection'
 import HeroSection from './HeroSection'
 
-const HomeModal = dynamic(() => import('./HomeModal'), {
+const HomeModal = dynamic(() => import('./TestHomeModal'), {
     loading: () => <div />
 })
 

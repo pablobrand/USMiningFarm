@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useMetaMask } from '../functions/metamask/MetamaskContext'
-import styles from '../styles/NavBar.module.css'
+import { useMetaMask } from '../../../functions/metamask/MetamaskContext'
+import styles from './NavBar.module.css'
 
 function NavBar() {
     const {
