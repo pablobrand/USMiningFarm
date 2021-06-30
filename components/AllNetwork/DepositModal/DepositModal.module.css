@@ -1,51 +1,49 @@
-.modal {
+.modalContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    top: 15% !important;
-    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87) !important;
+    transition: opacity .15s linear !important;
 }
 
 .modalHeader {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
     width: 100%;
-    padding: 0 1rem 1rem;
-    border-top-left-radius: calc(.3rem - 1px);
-    border-top-right-radius: calc(.3rem - 1px);
-    border: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 2rem;
 }
 
-.modalHeader button {
-    padding: 1rem 1rem;
-    margin: -1rem -1rem -1rem auto;
+.modalClose {
     background-color: transparent;
-    border: 0;
-    color: #fff;
-    outline: none !important;
-    float: right;
+    border: none;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
     text-shadow: 0 1px 0 #fff;
+    color: #fff;
     opacity: .5;
 }
 
-.modal h1 {
-    color: #fff;
-    font-weight: 900;
-    text-align: center;
+.modalClose:hover {
+    opacity: .7;
 }
 
-.modalLogo {
-    width: 200px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    display: block;
+.modalBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    color: #fff;
+}
+
+.modalImg {
+    margin-bottom: 1rem;
+}
+
+.modalBody h1 {
+    font-weight: 700;
 }
 
 .modalInput {
@@ -54,32 +52,28 @@
     padding: 15px 25px;
     border-radius: 10px;
     outline: none;
-    background: #7a2f4b;
-    color: #fff !important;
-    font-weight: 700;
     border: 0;
+    background-color: #7a2f4b;
+    font-weight: 700;
 }
 
-.modalInput::placeholder {
+.modalInput, .modalInput::placeholder {
     color: #fff;
 }
 
 .reviewButton {
-    background-color: #fdc600;
-    outline: none !important;
     width: 95%;
+    background-color: #fdc600;
+    outline: none;
     padding: 15px 25px;
     border-radius: 10px;
     margin: 0.5rem auto;
-    font-weight: 700;
-    display: block;
     border: 0;
+    font-weight: 700;
 }
 
-.backArrow {
-    width: 50px !important;
-    margin: 2rem auto !important;
-    cursor: pointer;
+.arrow {
+    margin: 2rem auto;
 }
 
 .tableButton {
@@ -89,18 +83,7 @@
     padding: 10px 15px;
     border: none;
     outline: none;
-    font-size: 16px;
-    font-weight: 700;
     color: #fff;
+    font-weight: 700;
     background-image: linear-gradient(to left, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
-}
-
-.root {
-    border-radius: 20px !important;
-}
-
-@media (max-width: 768px) {
-    .modal h1 {
-        font-size: 32px;
-    }
 }

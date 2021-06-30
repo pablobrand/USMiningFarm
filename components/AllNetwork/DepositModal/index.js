@@ -1,56 +1,40 @@
-/* eslint-disable react/button-has-type */
-import React from 'react'
-import Dialog from '@material-ui/core/Dialog'
 import Image from 'next/image'
-import { withStyles } from '@material-ui/core/styles'
+import useModal from './useModal'
 import styles from './DepositModal.module.css'
-
-const StyledDialog = withStyles({
-    paper: {
-        borderRadius: 20,
-        width: 500
-    }
-})(Dialog)
+import StyledDialog from './StyledDialog'
 
 const DepositModal = () => {
-    const [open, setOpen] = React.useState(false)
-
-    const handleClickOpen = () => {
-        setOpen(true)
-    }
-
-    const handleClose = () => {
-        setOpen(false)
-    }
+    const { isOpen, handleClose, handleOpen } = useModal(false)
 
     return (
         <>
-            <button className={styles.tableButton} onClick={handleClickOpen}>
+            <button type="button" className={styles.tableButton} onClick={handleOpen}>
                 DEPOSIT USMF LP
             </button>
-            <StyledDialog
-                classes={{ root: styles.root }}
-                alignItems="center"
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="form-dialog-title"
-            >
-                <div className={styles.modal}>
+            <StyledDialog open={isOpen} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <div className={styles.modalContainer}>
                     <div className={styles.modalHeader}>
-                        <button type="button" onClick={handleClose}>
+                        <button className={styles.modalClose} type="button" onClick={handleClose}>
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div className={styles.modalLogo}>
-                        <Image src="/assets/images/logo.png" width={100} height={100} />
+                    <div className={styles.modalBody}>
+                        <div className={styles.modalImg}>
+                            <Image src="/assets/images/logo.png" width={100} height={100} />
+                        </div>
+                        <h1>DEPOSIT USMF TO WIN</h1>
+                        <input
+                            className={styles.modalInput}
+                            type="text"
+                            placeholder="TICKET AMOUNT:"
+                        />
+                        <button type="button" className={styles.reviewButton}>
+                            REVIEW DEPOSIT
+                        </button>
+                        <div className={styles.arrow}>
+                            <Image src="/assets/images/arrow.png" width={50} height={50} />
+                        </div>
                     </div>
-                    <h1> DEPOSIT USMF TO WIN </h1>
-                    <input type="text" className={styles.modalInput} placeholder="TICKET AMOUNT:" />
-                    <button type="button" className={styles.reviewButton}>
-                        {' '}
-                        REVIEW DEPOSIT
-                    </button>
-                    <img src="assets/images/arrow.png" className={styles.backArrow} alt="" />
                 </div>
             </StyledDialog>
         </>
