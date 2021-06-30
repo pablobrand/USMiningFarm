@@ -186,7 +186,7 @@ a {
 .network-section .round-bg img {
     width: 100px;
     margin: 0 auto;
-    display: block;
+    display: block; 
     height: 100px;
 }
 
