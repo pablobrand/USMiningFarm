@@ -1,8 +1,0 @@
-.navItem {
-    padding: 0 1.5rem;
-}
-
-.active {
-    border-radius: 10px;
-    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
-}

@@ -79,11 +79,54 @@
 .creditRow {
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
 .creditRow p {
     margin-bottom: 0;
 }
+
+.creditRow a {
+    color: #fff;
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.searchWrapper input {
+    width: 100%;
+    height: 43px;
+    padding: 10px 80px 10px 15px;
+    border: 0;
+    background: #fff;
+    border-radius: 40px;
+    border-top-style: none;
+    font-family: 'Poppins', sans-serif;
+    outline: none !important;
+}
+
+.searchWrapper button {
+    border: 0;
+    padding: 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    border-radius: 40px;
+    position: absolute;
+    right: 0;
+    outline: none !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.socialIcons {
+    margin-top: 1.5rem;
+}
+
+.socialIcons > div:not(:last-child) {
+    margin-right: 10px !important;
+}
+
 
 .col3 {
     flex: 3

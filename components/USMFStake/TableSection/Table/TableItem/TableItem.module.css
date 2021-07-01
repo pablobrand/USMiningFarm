@@ -5,7 +5,9 @@
 }
 
 .tableItemBody td{
-    vertical-align: middle !important;
+    padding: 0 1rem;
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .tableItemRow {

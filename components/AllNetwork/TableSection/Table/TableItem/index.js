@@ -22,7 +22,7 @@ const TableItem = () => {
                         <h3>CURRENT USMF APR</h3>
                         <div>
                             <DepositModal id={3} />
-                            <div className="validation"> EARN 11.35% APR IN POOL </div>
+                            <div className={styles.validation}> EARN 11.35% APR IN POOL </div>
                         </div>
                     </div>
                 </div>

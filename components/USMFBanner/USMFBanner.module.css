@@ -4,3 +4,9 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 1920px) {
+    .banner {
+        background-size: 100%;
+    }
+}

@@ -4,20 +4,14 @@ import styles from './AboutSection.module.css'
 
 const AboutSection = () => {
     return (
-        <div className={`row ${styles.aboutSectionRow}`}>
-            <div className="col-md-6 col-xs-12 col-sm-12">
-                <Image
-                    className="w-100"
-                    src="/assets/images/about-imag.png"
-                    alt=""
-                    width={540}
-                    height={546.69}
-                />
+        <div className={`${styles.aboutSectionRow}`}>
+            <div className={styles.aboutSectionCol}>
+                <Image src="/assets/images/about-imag.png" alt="" width={540} height={546.69} />
             </div>
-            <div className={`col-md-6 col-xs-12 col-sm-12 ${styles.aboutSectionText}`}>
-                <h1 className="text-white"> ABOUT USMF </h1>
+            <div className={`${styles.aboutSectionCol} ${styles.aboutSectionText}`}>
+                <h1 className> ABOUT USMF </h1>
                 <div className={styles.aboutSectionTextLine} />
-                <p className="text-white">
+                <p>
                     {' '}
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
                     eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient

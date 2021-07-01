@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useEffect } from 'react'
 import Script from 'next/script'
 import $ from 'jquery'
-import TestHeader from '../components/TestHeader'
+import Header from '../components/Header'
 import '../public/assets/css/style.css'
 import 'font-awesome/css/font-awesome.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -23,8 +23,7 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
-            {/* <Header /> */}
-            <TestHeader />
+            <Header />
             <Component {...pageProps} />
             <Script
                 src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
