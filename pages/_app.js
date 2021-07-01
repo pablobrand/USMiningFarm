@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
-import Script from 'next/script'
 import $ from 'jquery'
 import Header from '../components/Header'
 import '../public/assets/css/style.css'
@@ -10,7 +9,7 @@ import MetaMaskProvider from '../functions/metamask/MetamaskContext'
 
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
-        $(window).scroll(function () {
+        $(window).on('scroll', function () {
             if ($(this).scrollTop() > 25) {
                 $('#banner').addClass('sticky')
             } else {
@@ -25,19 +24,6 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Header />
             <Component {...pageProps} />
-            <Script
-                src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-                strategy="beforeInteractive"
-            />
-            <Script
-                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
-                strategy="lazyOnload"
-            />
-            <Script
-                src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                strategy="beforeInteractive"
-            />
-            {/* <Script src="/assets/js/other.js" /> */}
         </MetaMaskProvider>
     )
 }
