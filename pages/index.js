@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HomeComponent from '../components/Home'
+import HomeComponent from '../components/Home/index'
 import Footer from '../components/Footer'
 
 export default function Home() {
