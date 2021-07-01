@@ -11,3 +11,7 @@ a {
     color: #232323;
     transition: color 0.3s ease;
 }
+
+.sticky {
+    background-color: #f7a417 !important;
+}

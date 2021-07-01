@@ -71,9 +71,9 @@
     margin-right: 8px !important;
 }
 
-.sticky {
-    background-color: #f7a417 !important;
-}
+/* .sticky {
+    background-color: #f7a417;
+} */
 
 @media (max-width: 768px) {
     .navList, .accountButton {
