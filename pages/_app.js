@@ -11,7 +11,7 @@ import MetaMaskProvider from '../functions/metamask/MetamaskContext'
 function MyApp({ Component, pageProps }) {
     useEffect(() => {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 75) {
+            if ($(this).scrollTop() > 25) {
                 $('#banner').addClass('sticky')
             } else {
                 $('#banner').removeClass('sticky')
