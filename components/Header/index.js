@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './Header.module.css'
 import MobileMenu from './MobileMenu'
 import NavList from './NavList'
-import AccountButton from './AccountButton'
+import HomeModal from '../HomeModal'
 
 const Header = () => {
     return (
@@ -12,7 +12,7 @@ const Header = () => {
                     <Image src="/assets/images/logo.png" width={60} height={60} />
                 </div>
                 <NavList />
-                <AccountButton />
+                <HomeModal />
                 <MobileMenu />
             </div>
         </div>

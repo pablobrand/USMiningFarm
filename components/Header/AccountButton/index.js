@@ -4,13 +4,13 @@ import Image from 'next/image'
 import { useMetaMask } from '../../../functions/metamask/MetamaskContext'
 import styles from './AccountButton.module.css'
 
-const AccountButton = () => {
+const AccountButton = ({ handleOpen }) => {
     const {
         metamaskState: { walletAccount }
     } = useMetaMask()
 
     return (
-        <div className={styles.accountButton}>
+        <button type="button" className={styles.accountButton} onClick={handleOpen}>
             <Link href="#">
                 <a className={styles.accountLink}>
                     <Image src="/assets/images/account-icon.png" width={30} height={30} />
@@ -18,7 +18,7 @@ const AccountButton = () => {
                     {walletAccount && 'OCXA12........6665'}
                 </a>
             </Link>
-        </div>
+        </button>
     )
 }
 

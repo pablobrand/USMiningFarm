@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-const useModal = (isAutoLoad) => {
-    const [isOpen, setIsOpen] = useState(isAutoLoad)
+const useModal = () => {
+    const [isOpen, setIsOpen] = useState(false)
 
     const handleOpen = () => {
         setIsOpen(true)
