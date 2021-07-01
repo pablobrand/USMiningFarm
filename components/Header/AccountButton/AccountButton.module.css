@@ -1,0 +1,30 @@
+.accountButton {
+    background-color: #3f3f3f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.accountLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.accountLink, .accountLink:hover, .accountLink:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.accountLink > div {
+    margin-right: 8px !important;
+}
+
+@media (max-width: 768px) {
+    .accountButton {
+        display: none;
+    }
+}

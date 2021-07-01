@@ -1,0 +1,33 @@
+.navList {
+    position: absolute;
+    left: calc(50% - 250px);
+}
+
+.navListContainer {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem {
+    padding: 5px 1.5rem;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.navItem, .navItem:hover, .navItem:active  {
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+}
+
+@media (max-width: 768px) {
+    .navList {
+        display: none;
+    }
+}

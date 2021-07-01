@@ -2,49 +2,31 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
 import Table from './Table'
+import Dropdown from '../Dropdown'
+import styles from './TableSection.module.css'
 
 const TableSection = () => {
     return (
-        <section className="table-section">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-6 col-xs-12 col-xs-12">
-                        <div className="margin-30 stake-button">
+        <section className={styles.tableSection}>
+            <div className={styles.tableContainer}>
+                <div className={styles.tableRow}>
+                    <div className={styles.tableCol}>
+                        <div className={styles.stakeButton}>
                             <button> LP STAKE </button>
                         </div>
                     </div>
 
-                    <div className="col-md-6 col-xs-12 col-xs-12">
-                        <div className="form-group network-dropdown">
-                            <div className="dropdown">
-                                <button
-                                    className="text-white font-weight-bold btn dropdown-toggle"
-                                    type="button"
-                                    data-toggle="dropdown"
-                                >
-                                    ALL NETWORKS
-                                    <span className="caret" />
-                                </button>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <a href="#"> Lorem </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Lorem </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Lorem </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Lorem </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div className={styles.tableCol}>
+                        <div>
+                            <Dropdown />
                         </div>
                     </div>
                 </div>
-                {/* Tables */}
-                <Table />
+                <div className={styles.tableRow2}>
+                    <div className={styles.tableCol2}>
+                        <Table />
+                    </div>
+                </div>
             </div>
         </section>
     )

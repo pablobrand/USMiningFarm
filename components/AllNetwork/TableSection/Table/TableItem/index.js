@@ -5,12 +5,6 @@ import DepositModal from '../../../DepositModal'
 import styles from './TableItem.module.css'
 
 const TableItem = () => {
-    const showModal = () => {
-        $(document).ready(function () {
-            $('#myModal3').modal('show')
-        })
-    }
-
     return (
         <div className={styles.tableItem}>
             <div className={styles.tableItemRow}>
@@ -27,15 +21,12 @@ const TableItem = () => {
                     <div className={styles.tableItemInput}>
                         <h3>CURRENT USMF APR</h3>
                         <div>
-                            <button className="custom-input" onClick={(event) => showModal(event)}>
-                                DEPOSIT USMF LP
-                            </button>
-                            <div className="validation"> EARN 11.35% APR IN POOL </div>
+                            <DepositModal id={3} />
+                            <div className={styles.validation}> EARN 11.35% APR IN POOL </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <DepositModal id={3} />
         </div>
     )
 }

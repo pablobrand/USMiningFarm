@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import Script from 'next/script'
 import $ from 'jquery'
 import Header from '../components/Header'
-
 import '../public/assets/css/style.css'
 import 'font-awesome/css/font-awesome.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css'

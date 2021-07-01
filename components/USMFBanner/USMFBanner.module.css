@@ -1,0 +1,12 @@
+.banner {
+    background-image: url('../../public/assets/images/top-headeer-bg.jpg');
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1920px) {
+    .banner {
+        background-size: 100%;
+    }
+}

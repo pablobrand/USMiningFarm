@@ -1,0 +1,59 @@
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: opacity .15s linear !important;
+}
+
+.modalHeader {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.modalClose {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    color: #fff;
+    opacity: .5;
+}
+
+.modalClose:hover {
+    opacity: .7;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.modalBody h1 {
+    font-weight: 700;
+}
+
+.metamaskButton {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.metamaskButton img {
+    width: 200px;
+}
+
+.helpLink, .helpLink:hover {
+    color: #fff;
+}

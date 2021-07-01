@@ -1,0 +1,22 @@
+.networkSection {
+    background-image: linear-gradient(to bottom, #3c3c3a, #2f2e2d, #222121, #151515, #020202);
+    height: 100%;
+    padding: 4rem 2rem;
+    padding-bottom: 0;
+}
+
+.networkSection h2 {
+    font-size: 35px;
+}
+
+.networkSection h3 {
+    font-size: 19px;
+    margin: 10px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.networkSection h1 {
+    font-weight: 800;
+    font-size: 35px;
+}
