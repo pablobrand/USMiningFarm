@@ -7,7 +7,7 @@ const HomeModal = dynamic(() => import('./HomeModal'), {
     loading: () => <div />
 })
 
-export default function HomeComponent() {
+function HomeComponent() {
     return (
         <>
             <HeroSection />
@@ -22,3 +22,5 @@ export default function HomeComponent() {
         </>
     )
 }
+
+export default HomeComponent

@@ -1,5 +1,6 @@
 .tableSection {
-    background-color: #020202;
+    /* background-color: #020202; */
+    background-color: rgba(2,2,2,0.85);
 }
 
 .tableContainer {
