@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../../public/assets/images/top-headeer-bg.jpg');
+    background-image: url('../../public/assets/images/top-header-bg.jpg');
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
