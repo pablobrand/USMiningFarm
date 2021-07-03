@@ -16,6 +16,7 @@
 
 .tableItemLabel {
     display: flex;
+    align-items: center;
     background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
     padding: 2rem;
     border-top-left-radius: 10px;

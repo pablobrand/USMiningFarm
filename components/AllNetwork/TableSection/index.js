@@ -1,34 +1,35 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
+import { Box } from '@material-ui/core'
 import Table from './Table'
 import Dropdown from '../Dropdown'
 import styles from './TableSection.module.css'
 
 const TableSection = () => {
     return (
-        <section className={styles.tableSection}>
-            <div className={styles.tableContainer}>
-                <div className={styles.tableRow}>
-                    <div className={styles.tableCol}>
-                        <div className={styles.stakeButton}>
+        <Box component="section" className={styles.tableSection}>
+            <Box className={styles.tableContainer}>
+                <Box className={styles.tableRow}>
+                    <Box className={styles.tableCol}>
+                        <Box className={styles.stakeButton}>
                             <button> LP STAKE </button>
-                        </div>
-                    </div>
+                        </Box>
+                    </Box>
 
-                    <div className={styles.tableCol}>
-                        <div>
+                    <Box className={styles.tableCol}>
+                        <Box>
                             <Dropdown />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.tableRow2}>
-                    <div className={styles.tableCol2}>
+                        </Box>
+                    </Box>
+                </Box>
+                <Box className={styles.tableRow2}>
+                    <Box className={styles.tableCol2}>
                         <Table />
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 
