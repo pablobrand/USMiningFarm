@@ -1,42 +1,43 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Box } from '@material-ui/core'
 import NetworkBlurb from '../NetworkBlurb'
 import styles from './NetworkStats.module.css'
 
 const NetworkStats = () => {
     return (
-        <section>
-            <div className={styles.networkStatRow}>
-                <div>
-                    <div className={styles.networkStatText}>
+        <Box compoenent="section">
+            <Box className={styles.networkStatRow}>
+                <Box>
+                    <Box className={styles.networkStatText}>
                         <h1>THE NETWORK IS LIVE</h1>
                         <p>
                             The People's Network is the world's fastest growing wireless network
                             ever.
                         </p>
-                    </div>
-                </div>
-            </div>
+                    </Box>
+                </Box>
+            </Box>
 
-            <div className={styles.networkStatRow}>
-                <div>
+            <Box className={styles.networkStatRow}>
+                <Box>
                     <NetworkBlurb heading="USMF OWNED" amount="46,391" propWidth={80} />
-                </div>
-                <div>
+                </Box>
+                <Box>
                     <NetworkBlurb
                         image="/assets/images/credit-card.png"
                         heading="CURRENT USMF STAKED"
                         amount="2,32,980"
                     />
-                </div>
-                <div>
+                </Box>
+                <Box>
                     <NetworkBlurb
                         image="/assets/images/data.png"
                         heading="CURRENT LP STAKED"
                         amount="0.6 GB"
                     />
-                </div>
-            </div>
-        </section>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 

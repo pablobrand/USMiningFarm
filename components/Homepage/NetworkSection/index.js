@@ -5,7 +5,7 @@ import styles from './NetworkSection.module.css'
 export default function NetworkSection() {
     return (
         <section className={styles.networkSection}>
-            <div className="container">
+            <div className={styles.networkSectionColumn}>
                 <NetworkStats />
                 <AboutSection />
             </div>

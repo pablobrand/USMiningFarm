@@ -4,7 +4,6 @@ import $ from 'jquery'
 import Header from '../components/Header'
 import '../public/assets/css/style.css'
 import 'font-awesome/css/font-awesome.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import MetaMaskProvider from '../functions/metamask/MetamaskContext'
 
 function MyApp({ Component, pageProps }) {

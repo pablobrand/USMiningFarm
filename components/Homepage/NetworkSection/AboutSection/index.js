@@ -1,16 +1,17 @@
+import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import AboutBlurb from '../AboutBlurb'
 import styles from './AboutSection.module.css'
 
 const AboutSection = () => {
     return (
-        <div className={`${styles.aboutSectionRow}`}>
-            <div className={styles.aboutSectionCol}>
+        <Box className={`${styles.aboutSectionRow}`}>
+            <Box className={styles.aboutSectionCol}>
                 <Image src="/assets/images/about-imag.png" alt="" width={540} height={546.69} />
-            </div>
-            <div className={`${styles.aboutSectionCol} ${styles.aboutSectionText}`}>
+            </Box>
+            <Box className={`${styles.aboutSectionCol} ${styles.aboutSectionText}`}>
                 <h1 className> ABOUT USMF </h1>
-                <div className={styles.aboutSectionTextLine} />
+                <Box className={styles.aboutSectionTextLine} />
                 <p>
                     {' '}
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
@@ -35,8 +36,8 @@ const AboutSection = () => {
                     heading="BIG DATA INSIGHTS"
                     text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa"
                 />
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }
 

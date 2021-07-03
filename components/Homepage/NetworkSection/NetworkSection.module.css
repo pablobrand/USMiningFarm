@@ -5,6 +5,19 @@
     padding-bottom: 0;
 }
 
+.networkSectionColumn {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.networkSection h1 {
+    font-weight: 800;
+    font-size: 35px;
+}
+
 .networkSection h2 {
     font-size: 35px;
 }
@@ -16,7 +29,26 @@
     margin-bottom: 0;
 }
 
-.networkSection h1 {
-    font-weight: 800;
-    font-size: 35px;
+@media (min-width: 576px) {
+    .networkSectionColumn {
+        max-width: 540px
+    }
+}
+
+@media (min-width: 768px) {
+    .networkSectionColumn {
+        max-width: 720px
+    }
+}
+
+@media (min-width: 992px) {
+    .networkSectionColumn {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .networkSectionColumn {
+        max-width: 1140px;
+    }
 }
