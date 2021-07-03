@@ -5,7 +5,7 @@ import styles from './NetworkStats.module.css'
 
 const NetworkStats = () => {
     return (
-        <Box compoenent="section">
+        <Box component="section">
             <Box className={styles.networkStatRow}>
                 <Box>
                     <Box className={styles.networkStatText}>

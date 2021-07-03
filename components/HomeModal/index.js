@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react'
+import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import Link from 'next/link'
 import useModal from './useModal'
@@ -18,16 +19,16 @@ const HomeModal = () => {
         <>
             <AccountButton handleOpen={handleOpen} />
             <StyledDialog open={isOpen} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <div className={styles.modalContainer}>
-                    <div className={styles.modalHeader}>
+                <Box className={styles.modalContainer}>
+                    <Box className={styles.modalHeader}>
                         <button className={styles.modalClose} type="button" onClick={handleClose}>
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div className={styles.modalBody}>
-                        <div className={styles.modalImg}>
+                    </Box>
+                    <Box className={styles.modalBody}>
+                        <Box className={styles.modalImg}>
                             <Image src="/assets/images/wallet-modal.png" width={200} height={195} />
-                        </div>
+                        </Box>
                         <h1>Click here to install MetaMask</h1>
                         <p>
                             In order to interact with our application, as intended, please connect
@@ -49,8 +50,8 @@ const HomeModal = () => {
                         <Link href="#">
                             <a className={styles.helpLink}> Help </a>
                         </Link>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
             </StyledDialog>
         </>
     )

@@ -1,20 +1,21 @@
+import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import styles from './AboutBlurb.module.css'
 
 const AboutBlurb = ({ image = '/assets/images/analysis.png', heading, text }) => {
     return (
-        <div className="about-blurb">
-            <div className={styles.aboutBlurbBG}>
-                <div className={styles.aboutBlurbImg}>
+        <Box className="about-blurb">
+            <Box className={styles.aboutBlurbBG}>
+                <Box className={styles.aboutBlurbImg}>
                     <Image src={image} alt="" width={60} height={60} />
-                </div>
+                </Box>
 
-                <div className={styles.aboutBlurbText}>
+                <Box className={styles.aboutBlurbText}>
                     <h4> {heading} </h4>
                     <p>{text}</p>
-                </div>
-            </div>
-        </div>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 

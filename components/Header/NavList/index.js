@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { Box } from '@material-ui/core'
 import styles from './NavList.module.css'
 
 const NavList = () => {
@@ -7,8 +8,8 @@ const NavList = () => {
     const path = router.pathname
 
     return (
-        <nav className={styles.navList}>
-            <div className={styles.navListContainer}>
+        <Box component="nav" className={styles.navList}>
+            <Box className={styles.navListContainer}>
                 <Link href="/">
                     <a className={`${styles.navItem} ${path === '/' ? styles.active : ''}`}>HOME</a>
                 </Link>
@@ -30,8 +31,8 @@ const NavList = () => {
                         LP STAKE
                     </a>
                 </Link>
-            </div>
-        </nav>
+            </Box>
+        </Box>
     )
 }
 

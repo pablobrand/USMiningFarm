@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { Box } from '@material-ui/core'
 import styles from './MobileMenu.module.css'
 import MobileAccountButton from './MobileAccountButton'
 
@@ -27,8 +28,8 @@ const MobileMenu = () => {
             >
                 <span className={styles.mobileMenuToggleIcon} />
             </button>
-            <div className={`${styles.mobileMenu} ${isMenuExpanded ? styles.show : ''}`}>
-                <div className={styles.mobileNavListContainer}>
+            <Box className={`${styles.mobileMenu} ${isMenuExpanded ? styles.show : ''}`}>
+                <Box className={styles.mobileNavListContainer}>
                     <Link href="/">
                         <a
                             className={`${styles.mobileNavItem} ${
@@ -56,9 +57,9 @@ const MobileMenu = () => {
                             LP STAKE
                         </a>
                     </Link>
-                </div>
+                </Box>
                 <MobileAccountButton />
-            </div>
+            </Box>
         </>
     )
 }
