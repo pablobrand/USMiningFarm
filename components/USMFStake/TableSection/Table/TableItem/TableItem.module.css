@@ -1,5 +1,5 @@
 .tableItemBody {
-    color: #fff;
+    color: #fff !important;
     cursor: pointer;
     border-top: 10px solid #020202;
 }
@@ -10,12 +10,16 @@
     vertical-align: middle;
 }
 
+.tableItemBody td:not(:first-child) {
+    text-align: center;
+}
+
 .tableItemRow {
     background-color: #212121;
 }
 
 .tableItemColumn1 {
-    display: flex;
+    display: flex !important;
     margin-left: 1.5rem;
     border: none;
 

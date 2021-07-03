@@ -1,14 +1,17 @@
 .tableRow {
-    color: #fff;
+    color: #fff !important;
 }
 
 .tableColumn1 {
     text-align: center;
     min-width: 300px;
+    color: #fff !important;
 }
 
 .tableColumn {
     min-width: 165px;
+    text-align: center;
+    color: #fff !important;
 }
 
 .tableColumn1, .tableColumn {
