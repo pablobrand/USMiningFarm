@@ -26,8 +26,8 @@ const TableItem = ({
         })
     }
     return (
-        <tbody className={styles.tableItemBody} onClick={changeStakeCardHandler}>
-            <tr className={styles.tableItemRow}>
+        <tbody className={styles.tableItemBody}>
+            <tr className={styles.tableItemRow} onClick={changeStakeCardHandler}>
                 <td className={styles.tableItemColumn1}>
                     <Image src="/assets/images/logo.png" width={80} height={80} />
                     <span className={styles.totalStakedAmount}>

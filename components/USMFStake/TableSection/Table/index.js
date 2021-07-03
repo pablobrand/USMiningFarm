@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
+import { Box, Table } from '@material-ui/core'
 import TableItem from './TableItem'
 import TableHead from './TableHead'
 import { useMetaMask } from '../../../../functions/metamask/MetamaskContext'
 import styles from './Table.module.css'
 
-const Table = () => {
+const TableComponent = () => {
     const { metamaskDispatch } = useMetaMask()
     useEffect(() => {
         metamaskDispatch({
@@ -19,8 +20,8 @@ const Table = () => {
         })
     }, [])
     return (
-        <div className={styles.table}>
-            <table>
+        <Box className={styles.table}>
+            <Table>
                 <TableHead />
                 <TableItem type={1} />
                 <TableItem
@@ -41,9 +42,9 @@ const Table = () => {
                     initialCurrentVoted="3 OM"
                     initialCurrentTotalStake={2.0}
                 />
-            </table>
-        </div>
+            </Table>
+        </Box>
     )
 }
 
-export default Table
+export default TableComponent
