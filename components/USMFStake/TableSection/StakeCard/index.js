@@ -1,4 +1,5 @@
 /* eslint-disable react/button-has-type */
+import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import { useMetaMask } from '../../../../functions/metamask/MetamaskContext'
 import styles from './StakeCard.module.css'
@@ -6,73 +7,73 @@ import styles from './StakeCard.module.css'
 const StakeCard = () => {
     const { metamaskState } = useMetaMask()
     return (
-        <div className={styles.stakeCard}>
-            <div className={styles.stakeCardBG}>
-                <div className={styles.stakeCardType}>
-                    <div className={styles.stakeCardImg}>
+        <Box className={styles.stakeCard}>
+            <Box className={styles.stakeCardBG}>
+                <Box className={styles.stakeCardType}>
+                    <Box className={styles.stakeCardImg}>
                         <Image src="/assets/images/logo.png" width={60} height={60} />
-                    </div>
-                    <div className={styles.stakeCardTypeLabel}>
+                    </Box>
+                    <Box className={styles.stakeCardTypeLabel}>
                         <h2>
                             {metamaskState.stakeCardDetails.typeId} <br />{' '}
                             <span> OM - STAKING </span>{' '}
                         </h2>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div className={styles.stakeCardBalance}>
-                    <div className={styles.stakeCardBalanceLabel}>
+                <Box className={styles.stakeCardBalance}>
+                    <Box className={styles.stakeCardBalanceLabel}>
                         <p> YOUR BALANCE </p>
-                    </div>
-                    <div className={styles.stakeCardBalanceAmount}>
+                    </Box>
+                    <Box className={styles.stakeCardBalanceAmount}>
                         <p> {metamaskState.stakeCardDetails?.currentTotalStake} OM </p>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div className={styles.stakeCardTotalStake}>
-                    <div className={styles.stakeCardTotalStakeLabel}>
+                <Box className={styles.stakeCardTotalStake}>
+                    <Box className={styles.stakeCardTotalStakeLabel}>
                         <p> CURRENT TOTAL STAKE </p>
-                    </div>
-                    <div className={styles.stakeCardTotalStakeAmount}>
+                    </Box>
+                    <Box className={styles.stakeCardTotalStakeAmount}>
                         <p> {metamaskState.stakeCardDetails?.currentTotalStake} OM </p>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div className={styles.stakeCardInput}>
-                    <div className={styles.stakeCardInputLabel}>
+                <Box className={styles.stakeCardInput}>
+                    <Box className={styles.stakeCardInputLabel}>
                         <h5> USMF </h5>
-                    </div>
-                    <div className={styles.stakeCardInputArea}>
+                    </Box>
+                    <Box className={styles.stakeCardInputArea}>
                         <h6> STAKE AMOUNT </h6>
                         <input type="text" placeholder="10000" />
                         <p> MIN. STAKE: 1 OM </p>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div className={styles.stakeCardEstimatedRewards}>
-                    <div className={styles.stakeCardEstimatedRewardsLabel}>
+                <Box className={styles.stakeCardEstimatedRewards}>
+                    <Box className={styles.stakeCardEstimatedRewardsLabel}>
                         <p> ESTIMATED REWARDS </p>
-                    </div>
-                    <div className={styles.stakeCardEstimatedRewardsAmount}>
+                    </Box>
+                    <Box className={styles.stakeCardEstimatedRewardsAmount}>
                         <p> 9 OM </p>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
-                <div className={styles.stakeCardMaturityDate}>
-                    <div className={styles.stakeCardMaturityDateLabel}>
+                <Box className={styles.stakeCardMaturityDate}>
+                    <Box className={styles.stakeCardMaturityDateLabel}>
                         <p> MATURITY DATE </p>
-                    </div>
-                    <div className={styles.stakeCardMaturityDateAmount}>
+                    </Box>
+                    <Box className={styles.stakeCardMaturityDateAmount}>
                         <p> {metamaskState?.stakeCardDetails?.timeTillMaturity} </p>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
 
                 <button className={styles.stakeCardButton}>
                     {' '}
                     STAKE <i className="pull-right position-relative fa fa-arrow-right" />
                 </button>
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }
 
