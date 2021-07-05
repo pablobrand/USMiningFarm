@@ -13,3 +13,14 @@ function AllNetwork() {
 }
 
 export default AllNetwork
+
+export async function getServerSideProps(ctx) {
+    const {
+        cookies: { metamaskData }
+    } = ctx.req
+    return {
+        props: {
+            metamaskData: JSON.parse(metamaskData) || null
+        }
+    }
+}

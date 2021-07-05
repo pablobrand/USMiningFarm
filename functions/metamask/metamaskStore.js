@@ -20,6 +20,11 @@ export const metamaskReducer = (state, { type, payload }) => {
                 ...state,
                 stakeCardDetails: payload
             }
+        case 'CHANGE_WALLET_ADDRESS':
+            return {
+                ...state,
+                walletAccount: payload
+            }
         default:
             return state
     }

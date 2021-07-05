@@ -15,7 +15,7 @@ const AccountButton = () => {
                 <a className={styles.accountLink}>
                     <Image src="/assets/images/account-icon.png" width={30} height={30} />
                     {!walletAccount && 'Connect Wallet'}
-                    {walletAccount && 'OCXA12........6665'}
+                    {walletAccount && walletAccount}
                 </a>
             </Link>
         </div>

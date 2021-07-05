@@ -15,7 +15,7 @@ const StakeCard = () => {
                     </Box>
                     <Box className={styles.stakeCardTypeLabel}>
                         <h2>
-                            {metamaskState.stakeCardDetails.typeId} <br />{' '}
+                            {metamaskState?.stakeCardDetails?.typeId} <br />{' '}
                             <span> OM - STAKING </span>{' '}
                         </h2>
                     </Box>

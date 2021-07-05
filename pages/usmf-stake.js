@@ -19,7 +19,7 @@ export async function getServerSideProps(ctx) {
 
     return {
         props: {
-            metamaskData: metamaskData || null
+            metamaskData: JSON.parse(metamaskData) || null
         }
     }
 }

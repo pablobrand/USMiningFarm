@@ -9,15 +9,32 @@ import { useMetaMask } from '../../functions/metamask/MetamaskContext'
 import { metamaskHandler } from '../../functions/metamask/metamask'
 import StyledDialog from './StyledDialog'
 import AccountButton from '../Header/AccountButton'
+import useOnStateUpdate from '../../functions/hooks/useOnStateUpdate'
 
 const HomeModal = () => {
     const { isOpen, handleOpen, handleClose } = useModal()
     const [isInstalling, setIsInstalling] = useState(false)
     const { metamaskState } = useMetaMask()
 
+    const stateUpdateHandler = () => {
+        if (metamaskState.walletAccount) {
+            handleClose()
+        }
+    }
+
+    const accountButtonHandler = () => {
+        if (metamaskState?.walletAccount) {
+            return null
+        }
+
+        return handleOpen()
+    }
+
+    useOnStateUpdate([metamaskState], stateUpdateHandler)
+
     return (
         <>
-            <AccountButton handleOpen={handleOpen} />
+            <AccountButton handleOpen={accountButtonHandler} />
             <StyledDialog open={isOpen} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <Box className={styles.modalContainer}>
                     <Box className={styles.modalHeader}>
@@ -29,7 +46,7 @@ const HomeModal = () => {
                         <Box className={styles.modalImg}>
                             <Image src="/assets/images/wallet-modal.png" width={200} height={195} />
                         </Box>
-                        <h1>Click here to install MetaMask</h1>
+                        {metamaskState?.isMetamaskInstalled && <h1>Connect your address.</h1>}
                         <p>
                             In order to interact with our application, as intended, please connect
                             to your Metamask

@@ -1,4 +1,6 @@
-import { createContext, useContext, useEffect, useReducer } from 'react'
+import { useRef, createContext, useContext, useEffect, useReducer } from 'react'
+import cookie from '../cookies'
+
 import { isMetamaskInstalled } from './metamask'
 import { metamaskInitialState, metamaskReducer } from './metamaskStore'
 
@@ -9,16 +11,47 @@ export const useMetaMask = () => {
 }
 
 export default function MetaMaskProvider({ children, metamaskData }) {
+    const isMounted = useRef(false)
     const [metamaskState, metamaskDispatch] = useReducer(
         metamaskReducer,
         metamaskData || metamaskInitialState
     )
 
     useEffect(() => {
+        if (!isMounted.current) {
+            isMounted.current = true
+            return () => {}
+        }
+        cookie.set('metamaskData', metamaskState, {
+            maxAge: 604800
+        })
+        return () => {}
+    }, [metamaskState])
+
+    useEffect(() => {
         if (!metamaskData?.isMetamaskInstalled) {
             metamaskDispatch({
                 type: 'METAMASK_INSTALLED',
                 payload: isMetamaskInstalled()
+            })
+        }
+    }, [])
+
+    useEffect(() => {
+        const { ethereum } = window
+        ethereum.on('accountsChanged', () => {
+            metamaskDispatch({
+                type: 'CHANGE_WALLET_ADDRESS',
+                payload: ethereum.selectedAddress
+            })
+        })
+
+        return () => {
+            ethereum.on('accountsChanged', () => {
+                metamaskDispatch({
+                    type: 'CHANGE_WALLET_ADDRESS',
+                    payload: ethereum.selectedAddress
+                })
             })
         }
     }, [])
