@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { useEffect } from 'react'
 import $ from 'jquery'
+import { ThemeProvider } from '@material-ui/styles'
+import { theme } from '../public/assets/js/theme'
 import Header from '../components/Header'
 import '../public/assets/css/style.css'
 import 'font-awesome/css/font-awesome.min.css'
@@ -17,13 +19,15 @@ function MyApp({ Component, pageProps }) {
         })
     }, [])
     return (
-        <MetaMaskProvider {...pageProps}>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-            <Header />
-            <Component {...pageProps} />
-        </MetaMaskProvider>
+        <ThemeProvider theme={theme}>
+            <MetaMaskProvider {...pageProps}>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                </Head>
+                <Header />
+                <Component {...pageProps} />
+            </MetaMaskProvider>
+        </ThemeProvider>
     )
 }
 export default MyApp
