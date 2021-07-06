@@ -14,7 +14,12 @@ const useStyles = makeStyles({
         textDecoration: 'none'
     },
 
+    mobileNavButton: {
+        width: '100%'
+    },
+
     mobileNavItem: {
+        width: '100%',
         color: '#fff',
         fontSize: '17px',
         fontWeight: 600
@@ -47,17 +52,29 @@ const MobileMenu = ({ handleOpen }) => {
             </button>
             <Box className={`${styles.mobileMenu} ${isMenuExpanded ? styles.show : ''}`}>
                 <Box className={styles.mobileNavListContainer}>
-                    <Button className={`${path === '/' ? classes.active : ''}`}>
+                    <Button
+                        className={`${classes.mobileNavButton} ${
+                            path === '/' ? classes.active : ''
+                        }`}
+                    >
                         <Link href="/">
                             <a className={classes.mobileNavItem}>HOME</a>
                         </Link>
                     </Button>
-                    <Button className={`${path === '/usmf-stake' ? classes.active : ''}`}>
+                    <Button
+                        className={`${classes.mobileNavButton} ${
+                            path === '/usmf-stake' ? classes.active : ''
+                        }`}
+                    >
                         <Link href="/usmf-stake">
                             <a className={classes.mobileNavItem}>USMF STAKE</a>
                         </Link>
                     </Button>
-                    <Button className={`${path === '/lp-stake' ? classes.active : ''}`}>
+                    <Button
+                        className={`${classes.mobileNavButton} ${
+                            path === '/lp-stake' ? classes.active : ''
+                        }`}
+                    >
                         <Link href="/lp-stake">
                             <a className={classes.mobileNavItem}>LP STAKE</a>
                         </Link>
