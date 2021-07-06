@@ -51,7 +51,7 @@ const MobileMenu = () => {
                     <Link href="/all-network">
                         <a
                             className={`${styles.mobileNavItem} ${
-                                path === '/all-network' ? styles.active : ''
+                                path === '/lp-stake' ? styles.active : ''
                             }`}
                         >
                             LP STAKE
