@@ -16,14 +16,14 @@ const useStyles = makeStyles({
     }
 })
 
-const AccountButton = () => {
+const AccountButton = ({ handleOpen }) => {
     const classes = useStyles()
     const {
         metamaskState: { walletAccount }
     } = useMetaMask()
 
     return (
-        <Button className={classes.mobileAccountButtonStyles}>
+        <Button className={classes.mobileAccountButtonStyles} onClick={handleOpen}>
             <Link href="#">
                 <a className={styles.accountLink}>
                     <Image src="/assets/images/account-icon.png" width={30} height={30} />

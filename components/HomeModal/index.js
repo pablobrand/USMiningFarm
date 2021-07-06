@@ -3,21 +3,17 @@ import { useState } from 'react'
 import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import Link from 'next/link'
-import useModal from './useModal'
 import styles from './HomeModal.module.css'
 import { useMetaMask } from '../../functions/metamask/MetamaskContext'
 import { metamaskHandler } from '../../functions/metamask/metamask'
 import StyledDialog from './StyledDialog'
-import AccountButton from '../Header/AccountButton'
 
-const HomeModal = () => {
-    const { isOpen, handleOpen, handleClose } = useModal()
+const HomeModal = ({ isOpen, handleClose }) => {
     const [isInstalling, setIsInstalling] = useState(false)
     const { metamaskState } = useMetaMask()
 
     return (
         <>
-            <AccountButton handleOpen={handleOpen} />
             <StyledDialog open={isOpen} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <Box className={styles.modalContainer}>
                     <Box className={styles.modalHeader}>
