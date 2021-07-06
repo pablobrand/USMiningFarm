@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import AllNetworkComponent from '../components/LPStake'
+import LPStakeComponent from '../components/LPStake'
 
 function AllNetwork() {
     return (
@@ -7,7 +7,7 @@ function AllNetwork() {
             <Head>
                 <title>LP Stake</title>
             </Head>
-            <AllNetworkComponent />
+            <LPStakeComponent />
         </>
     )
 }

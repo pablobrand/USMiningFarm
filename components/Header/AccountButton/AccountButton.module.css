@@ -1,5 +1,6 @@
 .accountButton {
     background-color: #3f3f3f;
+    font-family: inherit;
     color: #fff;
     padding: 10px 20px;
     border-radius: 50px;

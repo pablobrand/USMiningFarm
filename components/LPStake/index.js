@@ -1,15 +1,30 @@
-import { Box } from '@material-ui/core'
-import TableSection from './TableSection'
-import USMFBanner from '../USMFBanner'
-import styles from './USMFNetwork.module.css'
+import { Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
+import LPStakeSection from './LPStakeSection'
 
-function AllNetworkComponent() {
+const useStyles = makeStyles({
+    bannerStyles: {
+        backgroundImage: 'url(/assets/images/top-header-bg.jpg)',
+        backgroundSize: '100%',
+        backgroundPosition: 'top',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#1d1d1d'
+    },
+
+    bannerArea: {
+        height: '100px'
+    }
+})
+
+const LPStake = () => {
+    const classes = useStyles()
+
     return (
-        <Box className={styles.container}>
-            <USMFBanner />
-            <TableSection />
-        </Box>
+        <Grid container className={classes.bannerStyles}>
+            <Grid container item className={classes.bannerArea} component="section" />
+            <LPStakeSection />
+        </Grid>
     )
 }
 
-export default AllNetworkComponent
+export default LPStake

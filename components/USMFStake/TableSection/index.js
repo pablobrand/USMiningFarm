@@ -1,21 +1,26 @@
-/* eslint-disable react/button-has-type */
-import { Box } from '@material-ui/core'
-import Table from './Table'
+import { Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 import StakeCard from './StakeCard'
-import styles from './TableSection.module.css'
+import USMFTable from './USMFTable'
 
-const TableSection = () => {
+const useStyles = makeStyles({
+    tableSection: {
+        minHeight: 'calc(100vh - 198px)',
+        backgroundColor: 'rgba(2,2,2,.85)',
+        padding: '25px',
+        flex: '1 1'
+    }
+})
+
+const TableSecton = () => {
+    const classes = useStyles()
+
     return (
-        <Box component="section" className={styles.tableSection}>
-            <Box className={styles.tableSectionRow}>
-                {/* <div className="margin-30 stake-button">
-                    <button> STAKE </button>
-                </div> */}
-                <Table />
-                <StakeCard />
-            </Box>
-        </Box>
+        <Grid container item className={classes.tableSection} compoenent="section">
+            <USMFTable />
+            <StakeCard />
+        </Grid>
     )
 }
 
-export default TableSection
+export default TableSecton

@@ -1,9 +1,6 @@
 .dropdownButton {
-    float: right;
     background-color: transparent;
     border: 1px solid transparent;
-    margin-right: 1.5rem;
-    margin-top: 1rem;
     padding: .375rem .75rem;
     line-height: 1.5;
     border-radius: .25rem;
@@ -11,6 +8,7 @@
     color: #fff;
     font-size: 22px;
     font-weight: 700;
+    font-family: inherit;
 }
 
 .caret {
@@ -24,10 +22,10 @@
     border-left: .3em solid transparent;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .dropdownButton {
         float: initial;
         display: block;
         margin: 10px auto;
     }
-}
+} */

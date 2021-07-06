@@ -22,12 +22,8 @@ const NavList = () => {
                         USMF STAKE
                     </a>
                 </Link>
-                <Link href="/all-network">
-                    <a
-                        className={`${styles.navItem} ${
-                            path === '/all-network' ? styles.active : ''
-                        }`}
-                    >
+                <Link href="/lp-stake">
+                    <a className={`${styles.navItem} ${path === '/lp-stake' ? styles.active : ''}`}>
                         LP STAKE
                     </a>
                 </Link>
