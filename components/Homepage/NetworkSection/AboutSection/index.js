@@ -10,7 +10,7 @@ const AboutSection = () => {
                 <Image src="/assets/images/about-imag.png" alt="" width={540} height={546.69} />
             </Box>
             <Box className={`${styles.aboutSectionCol} ${styles.aboutSectionText}`}>
-                <h1 className> ABOUT USMF </h1>
+                <h1> ABOUT USMF </h1>
                 <Box className={styles.aboutSectionTextLine} />
                 <p>
                     {' '}
