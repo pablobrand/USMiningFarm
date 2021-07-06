@@ -19,15 +19,15 @@ function MyApp({ Component, pageProps }) {
         })
     }, [])
     return (
-        <MetaMaskProvider {...pageProps}>
-            <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-            </Head>
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <MetaMaskProvider {...pageProps}>
+                <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                </Head>
                 <Header />
                 <Component {...pageProps} />
-            </ThemeProvider>
-        </MetaMaskProvider>
+            </MetaMaskProvider>
+        </ThemeProvider>
     )
 }
 export default MyApp
