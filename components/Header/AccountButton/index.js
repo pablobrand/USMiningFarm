@@ -3,7 +3,6 @@ import { Button, makeStyles } from '@material-ui/core'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMetaMask } from '../../../functions/metamask/MetamaskContext'
-import styles from './AccountButton.module.css'
 
 const useStyles = makeStyles({
     accountButtonStyles: {
@@ -14,6 +13,16 @@ const useStyles = makeStyles({
         borderRadius: '50px',
         border: 'none',
         textAlign: 'center'
+    },
+
+    accountLink: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignTtems: 'center',
+        fontSize: '17px',
+        fontWeight: 600,
+        color: '#fff',
+        marginLeft: '8px'
     },
 
     '@media (max-width: 767px)': {
@@ -32,11 +41,18 @@ const AccountButton = ({ handleOpen }) => {
     return (
         <Button className={classes.accountButtonStyles} onClick={handleOpen}>
             <Link href="#">
-                <a className={styles.accountLink}>
-                    <Image src="/assets/images/account-icon.png" width={30} height={30} />
-                    {!walletAccount && 'Connect Wallet'}
-                    {walletAccount && walletAccount}
-                </a>
+                <>
+                    <Image
+                        src="/assets/images/account-icon.png"
+                        className={classes.accountButtonLogo}
+                        width={30}
+                        height={30}
+                    />
+                    <a className={classes.accountLink}>
+                        {!walletAccount && 'Connect Wallet'}
+                        {walletAccount && walletAccount}
+                    </a>
+                </>
             </Link>
         </Button>
     )

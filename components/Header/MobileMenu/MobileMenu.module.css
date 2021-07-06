@@ -53,51 +53,10 @@
     top: 8px;
 }
 
-.mobileMenu {
-    display: none;
-}
-
-.show {
-    display: block;
-    width: 100%;
-}
-
 @media (max-width: 768px) {
 
     .mobileMenuToggle {
         display: block;
-    }
-
-    .mobileMenu {
-        background-color: #f7a417;
-        flex-basis: 100%;
-        flex-grow: 1;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .mobileNavListContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-    
-    .mobileNavItem {
-        width: 100%;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 600;
-    }
-    
-    .mobileNavItem, .mobileNavItem:hover, .mobileNavItem:active  {
-        color: #fff;
-        text-decoration: none;
-    }
-    
-    .active {
-        border-radius: 10px;
-        background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
     }
 }
 
