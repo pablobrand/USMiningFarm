@@ -1,0 +1,97 @@
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: opacity .15s linear !important;
+}
+
+.modalHeader {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.modalClose {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    color: #fff;
+    opacity: .5;
+}
+
+.modalClose:hover {
+    opacity: .7;
+}
+
+.modalBody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.modalImg {
+    margin-bottom: 1rem;
+}
+
+.modalBody h1 {
+    font-weight: 700;
+}
+
+.modalInput {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    background-color: #7a2f4b;
+    font-weight: 700;
+}
+
+.modalInput, .modalInput::placeholder {
+    color: #fff;
+}
+
+.reviewButton {
+    width: 95%;
+    background-color: #fdc600;
+    outline: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin: 0.5rem auto;
+    border: 0;
+    font-weight: 700;
+}
+
+.arrow {
+    margin: 2rem auto;
+}
+
+.tableButton {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: linear-gradient(to left, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+}
+
+@media (min-width: 768px) and (max-width: 1369px) {
+    .tableButton {
+        padding: 0;
+    }
+}
