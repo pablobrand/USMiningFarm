@@ -1,18 +1,32 @@
-/* eslint-disable react/button-has-type */
-import { Box } from '@material-ui/core'
-import ValueSection from './ValueSection'
+import { Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
 import TableSection from './TableSection'
-import USMFBanner from '../USMFBanner'
-import styles from './USMFStake.module.css'
+import ValueSection from './ValueSection'
 
-function USMFStakeComponent() {
+const useStyles = makeStyles({
+    bannerStyles: {
+        backgroundImage: 'url(/assets/images/top-header-bg.jpg)',
+        backgroundSize: '100%',
+        backgroundPosition: 'top',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#1d1d1d'
+    },
+
+    bannerArea: {
+        height: '100px'
+    }
+})
+
+const USMFStake = () => {
+    const classes = useStyles()
+
     return (
-        <Box className={styles.container}>
-            <USMFBanner />
+        <Grid container className={classes.bannerStyles}>
+            <Grid container item className={classes.bannerArea} component="section" />
             <ValueSection />
             <TableSection />
-        </Box>
+        </Grid>
     )
 }
 
-export default USMFStakeComponent
+export default USMFStake

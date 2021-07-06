@@ -1,36 +1,72 @@
-/* eslint-disable react/button-has-type */
-import { Button } from '@material-ui/core'
-import Box from '@material-ui/core/Box'
-import styles from './ValueSection.module.css'
+import { Grid, Typography, Button } from '@material-ui/core'
+import { makeStyles } from '@material-ui/styles'
+
+const useStyles = makeStyles({
+    bannerStyles: {
+        backgroundImage: 'url(/assets/images/top-header-bg.jpg)',
+        backgroundSize: '100%',
+        backgroundPosition: 'top',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#1d1d1d'
+    },
+
+    bannerArea: {
+        height: '100px'
+    },
+
+    valueSection: {
+        backgroundColor: '#212121',
+        padding: '25px',
+        border: '1px solid #fff'
+    },
+
+    valueText: {
+        fontSize: 32,
+        color: '#ffffff',
+        fontWeight: 700
+    },
+
+    stakedValue: {
+        backgroundImage: 'linear-gradient(90deg,#b43838,#b8374d,#b83b61,#b54175,#ae4a87)',
+        color: 'transparent',
+        position: 'relative',
+        backgroundClip: 'text',
+        WebkitBackgroundClip: 'text',
+        fontSize: 32,
+        fontWeight: 700
+    },
+
+    buttonStyles: {
+        backgroundImage: 'linear-gradient(90deg,#b43838,#b8374d,#b83b61,#b54175,#ae4a87)',
+        color: '#ffffff',
+        border: 'none',
+        borderRadius: '10px',
+        fontSize: 16,
+        fontWeight: 600,
+        padding: '8px 35px'
+    }
+})
 
 const ValueSection = () => {
+    const classes = useStyles()
+
     return (
-        <Box component="section" className={styles.valueSection}>
-            <Box className={styles.valueSectionRow}>
-                <Box className={styles.totalStakedText}>
-                    <h2>
-                        TOTAL STAKED VALUE: <span> $0 </span>
-                    </h2>
-                </Box>
-                <Box className={styles.valueSectionButton}>
-                    <Button>BUY USMF</Button>
-                </Box>
-            </Box>
-        </Box>
+        <Grid container item className={classes.valueSection} component="section">
+            <Grid container item className={classes.valueRow}>
+                <Grid container item justify="space-between">
+                    <Typography className={classes.valueText} variant="h2">
+                        TOTAL STAKED VALUE:{' '}
+                        <Typography component="span" className={classes.stakedValue}>
+                            $0
+                        </Typography>
+                    </Typography>
+                    <Button variant="contained" className={classes.buttonStyles}>
+                        BUY USMF
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
     )
 }
-
-/* <section className={styles.valueSection}>
-    <div className={styles.valueSectionRow}>
-        <div className={styles.totalStakedText}>
-            <h2>
-                TOTAL STAKED VALUE: <span> $0 </span>
-            </h2>
-        </div>
-        <div className={styles.valueSectionButton}>
-            <button> BUY USMF </button>
-        </div>
-    </div>
-</section> */
 
 export default ValueSection

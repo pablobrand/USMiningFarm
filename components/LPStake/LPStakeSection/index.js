@@ -103,7 +103,7 @@ const LPStakeSection = () => {
                         <Typography variant="h5" className={classes.messageHeading}>
                             MESSAGE
                         </Typography>
-                        <Typography variant="p" className={classes.messageParagraph}>
+                        <Typography className={classes.messageParagraph}>
                             Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has been the industry's standard dummy text ever
                             since the since the 1500s, when an unknown printer took a galley of type

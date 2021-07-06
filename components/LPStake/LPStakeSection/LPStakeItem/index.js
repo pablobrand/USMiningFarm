@@ -124,7 +124,7 @@ const LPStakeItem = ({ handleOpen }) => {
         <Grid container item className={classes.LPStakeItemSection}>
             <Grid container item className={classes.LPStakeItem}>
                 <Grid container item direction="row" className={classes.LPStakeItemLabel}>
-                    <Grid item direction="column" className={classes.LPStakeItemLabelHeader}>
+                    <Grid item className={classes.LPStakeItemLabelHeader}>
                         <Image src="/assets/images/logo.png" height={80} width={80} />
                         <Typography
                             variant="h3"
@@ -165,7 +165,6 @@ const LPStakeItem = ({ handleOpen }) => {
                             DEPOSIT USMF
                         </Button>
                         <Typography
-                            variant="span"
                             style={{
                                 fontSize: '12px',
                                 fontWeight: 600,
