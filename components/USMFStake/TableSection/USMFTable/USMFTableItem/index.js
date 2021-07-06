@@ -1,55 +1,41 @@
+import { useState, useEffect } from 'react'
 import { Typography, TableCell, TableRow } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Image from 'next/image'
 import { useMetaMask } from '../../../../../functions/metamask/MetamaskContext'
 
 const useStyles = makeStyles({
-    tableSection: {
-        minHeight: 'calc(100vh - 198px)',
-        backgroundColor: 'rgba(2,2,2,.85)',
-        padding: '25px',
-        flex: '1 1'
-    },
-
-    table: {
-        minWidth: 960
-    },
-
-    tableHeadFirstCell: {
-        fontSize: '1rem',
-        fontWeight: 700,
-        textAlign: 'center',
-        minWidth: '300px',
-        borderColor: 'transparent'
-    },
-
-    tableHeadCell: {
-        fontSize: '1rem',
-        fontWeight: 700,
-        minWidth: '165px',
-        borderColor: 'transparent'
-    },
-
-    tableBodyRow: {
-        borderTop: '10px solid #020202',
-        backgroundColor: '#212121'
-    },
-
     tableBodyFirstCell: {
+        backgroundColor: '#212121',
         fontSize: '1rem',
         fontWeight: 700,
-        minWidth: '300px',
+        minWidth: '200px',
         borderColor: 'transparent',
-        display: 'flex'
+        display: 'flex',
+        borderTopLeftRadius: '10px',
+        borderBottomLeftRadius: '10px'
     },
 
     tableBodyCell: {
+        backgroundColor: '#212121',
         color: '#6c6c6c',
         fontSize: '18px',
         fontWeight: 700,
         padding: '0 15px',
-        minWidth: '165px',
+        minWidth: '100px',
         borderColor: 'transparent'
+    },
+
+    tableBodyLastCell: {
+        backgroundColor: '#212121',
+        color: '#6c6c6c',
+        fontSize: '18px',
+        fontWeight: 700,
+        padding: '0 15px',
+        minWidth: '100px',
+        borderColor: 'transparent',
+        borderTopRightRadius: '10px',
+        borderBottomRightRadius: '10px'
     },
 
     type: {
@@ -76,6 +62,8 @@ const USMFTableItem = ({
     type = 1
 }) => {
     const { metamaskState, metamaskDispatch } = useMetaMask()
+    // eslint-disable-next-line no-unused-vars
+    const [status, setStatus] = useState(initialStatus)
     const changeStakeCardHandler = () => {
         metamaskDispatch({
             type: 'CHANGE_STAKE_CARD',
@@ -87,6 +75,23 @@ const USMFTableItem = ({
             }
         })
     }
+
+    const setStatusColor = (currentStatus) => {
+        switch (currentStatus.toUpperCase()) {
+            case 'ACTIVE':
+                return '#169e2d'
+            case 'VOTING':
+                return '#F7A417'
+            case 'LOCKED':
+                return '#F71726'
+            default:
+                return '#6c6c6c'
+        }
+    }
+
+    useEffect(() => {
+        setStatusColor(status)
+    }, [])
 
     const classes = useStyles()
     return (
@@ -100,12 +105,15 @@ const USMFTableItem = ({
                     </Typography>
                 </Typography>
             </TableCell>
-            <TableCell className={classes.tableBodyCell} style={{ color: '#169e2d' }}>
-                {initialStatus.toUpperCase()}
+            <TableCell
+                className={classes.tableBodyCell}
+                style={{ color: `${setStatusColor(status)}` }}
+            >
+                {status.toUpperCase()}
             </TableCell>
             <TableCell className={classes.tableBodyCell}>{initialEstimatedRewards}</TableCell>
             <TableCell className={classes.tableBodyCell}>{initialTimeTillMaturity}</TableCell>
-            <TableCell className={classes.tableBodyCell}>{initialCurrentVoted}</TableCell>
+            <TableCell className={classes.tableBodyLastCell}>{initialCurrentVoted}</TableCell>
         </TableRow>
     )
 }

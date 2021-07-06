@@ -14,77 +14,16 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 import { useMetaMask } from '../../../../functions/metamask/MetamaskContext'
 
 const useStyles = makeStyles({
-    tableSection: {
-        minHeight: 'calc(100vh - 198px)',
-        backgroundColor: 'rgba(2,2,2,.85)',
-        padding: '25px',
-        flex: '1 1'
-    },
-
-    table: {
-        minWidth: 960
-    },
-
-    tableHeadFirstCell: {
-        fontSize: '1rem',
-        fontWeight: 700,
-        textAlign: 'center',
-        minWidth: '300px',
-        borderColor: 'transparent'
-    },
-
-    tableHeadCell: {
-        fontSize: '1rem',
-        fontWeight: 700,
-        minWidth: '165px',
-        borderColor: 'transparent'
-    },
-
-    tableBodyRow: {
-        borderTop: '10px solid #020202',
-        backgroundColor: '#212121'
-    },
-
-    tableBodyFirstCell: {
-        fontSize: '1rem',
-        fontWeight: 700,
-        minWidth: '300px',
-        borderColor: 'transparent',
-        display: 'flex'
-    },
-
-    tableBodyCell: {
-        color: '#6c6c6c',
-        fontSize: '18px',
-        fontWeight: 700,
-        padding: '0 15px',
-        minWidth: '165px',
-        borderColor: 'transparent'
-    },
-
-    type: {
-        fontSize: '20px',
-        fontWeight: 700,
-        color: '#8e353c',
-        paddingLeft: '1rem'
-    },
-
-    typeValue: {
-        fontSize: '20px',
-        fontWeight: 700,
-        color: '#ffffff'
-    },
-
     stakeCardContainer: {
         backgroundColor: '#212121',
-        padding: '10px',
         margin: '30px 0px 30px 30px',
         borderRadius: '10px',
-        width: '550px'
+        width: '650px',
+        height: 'max-content'
     },
 
     stakeCardHeaderRoot: {
-        borderBottom: '1px solid #dee2e6',
+        borderBottom: '1px solid #707070',
         padding: '20px'
     },
 
@@ -180,6 +119,21 @@ const useStyles = makeStyles({
             margin: '30px 0',
             width: '100%'
         }
+    },
+
+    '@media (min-width: 992px) and (max-width: 1201px)': {
+        USMFLabelColumn: {
+            flex: '0 0 100%'
+        },
+
+        stakeCardInputColumn: {
+            flex: '0 0 100%',
+            padding: '4px !important'
+        },
+
+        stakeCardTextContainer: {
+            flexDirection: 'column'
+        }
     }
 })
 
@@ -188,7 +142,7 @@ const StakeCard = () => {
     const { metamaskState } = useMetaMask()
 
     return (
-        <Grid lg={5} container item justify="flex-end" className={classes.stakeCard}>
+        <Grid lg={4} container item justify="flex-end" className={classes.stakeCard}>
             <Card className={classes.stakeCardContainer}>
                 <CardHeader
                     avatar={<Image src="/assets/images/logo.png" height={60} width={60} />}
@@ -201,7 +155,7 @@ const StakeCard = () => {
                         avatar: classes.stakeCardAvatar
                     }}
                 />
-                <CardContent style={{ borderBottom: '1px solid #dee2e6' }}>
+                <CardContent style={{ borderBottom: '1px solid #707070' }}>
                     <Grid container direction="column" spacing={2}>
                         <Grid
                             item

@@ -19,21 +19,23 @@ const useStyles = makeStyles({
     },
 
     table: {
-        minWidth: 960
+        minWidth: 600,
+        borderSpacing: '0 10px',
+        borderCollapse: 'separate'
     },
 
     tableHeadFirstCell: {
         fontSize: '1rem',
         fontWeight: 700,
         textAlign: 'center',
-        minWidth: '300px',
+        minWidth: '200px',
         borderColor: 'transparent'
     },
 
     tableHeadCell: {
         fontSize: '1rem',
         fontWeight: 700,
-        minWidth: '165px',
+        minWidth: '100px',
         borderColor: 'transparent'
     },
 
@@ -76,8 +78,8 @@ const useStyles = makeStyles({
 const USMFTable = () => {
     const classes = useStyles()
     return (
-        <Grid lg={7} container item className={classes.tableSectionRow}>
-            <TableContainer>
+        <Grid lg={8} container item className={classes.tableSectionRow}>
+            <TableContainer style={{ height: 'max-content' }}>
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
@@ -95,7 +97,7 @@ const USMFTable = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <USMFTableItem type={1} initialStatus="Locked" />
+                        <USMFTableItem type={1} initialStatus="ACTIVE" />
                         <USMFTableItem
                             type={2}
                             initialStatus="VOTING"
