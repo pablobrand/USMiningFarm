@@ -7,16 +7,17 @@ import styles from './HomeModal.module.css'
 import { useMetaMask } from '../../functions/metamask/MetamaskContext'
 import { metamaskHandler } from '../../functions/metamask/metamask'
 import StyledDialog from './StyledDialog'
+import useOnStateUpdate from '../../functions/hooks/useOnStateUpdate'
 
 const HomeModal = ({ isOpen, handleClose }) => {
     const [isInstalling, setIsInstalling] = useState(false)
     const { metamaskState } = useMetaMask()
 
-    // const stateUpdateHandler = () => {
-    //     if (metamaskState.walletAccount) {
-    //         handleClose()
-    //     }
-    // }
+    const stateUpdateHandler = () => {
+        if (metamaskState.walletAccount) {
+            handleClose()
+        }
+    }
 
     // const accountButtonHandler = () => {
     //     if (metamaskState?.walletAccount) {
@@ -26,7 +27,7 @@ const HomeModal = ({ isOpen, handleClose }) => {
     //     return handleOpen()
     // }
 
-    // useOnStateUpdate([metamaskState], stateUpdateHandler)
+    useOnStateUpdate([metamaskState], stateUpdateHandler)
 
     return (
         <>
