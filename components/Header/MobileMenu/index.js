@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     }
 })
 
-const MobileMenu = () => {
+const MobileMenu = ({ handleOpen }) => {
     const classes = useStyles()
     const [isMenuExpanded, setIsMenuExpanded] = useState(false)
     const router = useRouter()
@@ -63,7 +63,7 @@ const MobileMenu = () => {
                         </Link>
                     </Button>
                 </Box>
-                <MobileAccountButton />
+                <MobileAccountButton handleOpen={handleOpen} />
             </Box>
         </>
     )

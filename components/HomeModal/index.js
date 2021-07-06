@@ -3,38 +3,33 @@ import { useState } from 'react'
 import { Box } from '@material-ui/core'
 import Image from 'next/image'
 import Link from 'next/link'
-import useModal from './useModal'
 import styles from './HomeModal.module.css'
 import { useMetaMask } from '../../functions/metamask/MetamaskContext'
 import { metamaskHandler } from '../../functions/metamask/metamask'
 import StyledDialog from './StyledDialog'
-import AccountButton from '../Header/AccountButton'
-import useOnStateUpdate from '../../functions/hooks/useOnStateUpdate'
 
-const HomeModal = () => {
-    const { isOpen, handleOpen, handleClose } = useModal()
+const HomeModal = ({ isOpen, handleClose }) => {
     const [isInstalling, setIsInstalling] = useState(false)
     const { metamaskState } = useMetaMask()
 
-    const stateUpdateHandler = () => {
-        if (metamaskState.walletAccount) {
-            handleClose()
-        }
-    }
+    // const stateUpdateHandler = () => {
+    //     if (metamaskState.walletAccount) {
+    //         handleClose()
+    //     }
+    // }
 
-    const accountButtonHandler = () => {
-        if (metamaskState?.walletAccount) {
-            return null
-        }
+    // const accountButtonHandler = () => {
+    //     if (metamaskState?.walletAccount) {
+    //         return null
+    //     }
 
-        return handleOpen()
-    }
+    //     return handleOpen()
+    // }
 
-    useOnStateUpdate([metamaskState], stateUpdateHandler)
+    // useOnStateUpdate([metamaskState], stateUpdateHandler)
 
     return (
         <>
-            <AccountButton handleOpen={accountButtonHandler} />
             <StyledDialog open={isOpen} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <Box className={styles.modalContainer}>
                     <Box className={styles.modalHeader}>
