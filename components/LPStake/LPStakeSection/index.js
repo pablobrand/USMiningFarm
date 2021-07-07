@@ -57,9 +57,9 @@ const useStyles = makeStyles({
         }
     },
 
-    '@media (max-width: 767px)': {
+    '@media (max-width: 991px)': {
         LPStakeContainer: {
-            padding: '15px'
+            padding: '24px'
         },
 
         LPStakeButtonContainer: {
@@ -88,13 +88,13 @@ const LPStakeSection = () => {
         <Grid item className={classes.LPStakeSection}>
             <Grid container item className={classes.LPStakeContainer} component="section">
                 <Grid container item justify="space-between" style={{ marginBottom: '5rem' }}>
-                    <Grid item container xs={12} md={6} className={classes.LPStakeButtonContainer}>
+                    <Grid item container xs={12} lg={6} className={classes.LPStakeButtonContainer}>
                         {/* <DepositModal /> */}
                         <Button className={classes.buttonStyles} onClick={handleOpen}>
                             LP STAKE
                         </Button>
                     </Grid>
-                    <Grid item container xs={12} md={6} className={classes.dropdownContainer}>
+                    <Grid item container xs={12} lg={6} className={classes.dropdownContainer}>
                         {/* <Dropdown /> */}
                     </Grid>
                 </Grid>
