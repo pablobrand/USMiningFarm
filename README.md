@@ -7,7 +7,7 @@ First, install necessary package dependencies:
 ```bash
 npm install
 # or
-yarn install
+yarn
 ```
 
 Second, run the development server:
