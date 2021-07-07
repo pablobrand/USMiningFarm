@@ -19,4 +19,4 @@ yarn dev
 ```
 
 ## Material-UI
-The Material-UI setup is already configured for server-side rendering according from their [Next.js Example (modification of _document.js)](https://github.com/mui-org/material-ui/tree/master/examples/nextjs)
+The Material-UI setup is already configured for server-side rendering according from their [Next.js Example (modification of _document.js and _app.js)](https://github.com/mui-org/material-ui/tree/master/examples/nextjs)
