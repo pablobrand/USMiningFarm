@@ -64,7 +64,7 @@ const useStyles = makeStyles({
         }
     },
 
-    '@media (max-width: 767px)': {
+    '@media (max-width: 991px)': {
         LPStakeContainer: {
             padding: '15px'
         },
