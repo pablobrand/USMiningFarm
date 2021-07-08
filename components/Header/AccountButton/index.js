@@ -3,6 +3,7 @@ import { Button, makeStyles } from '@material-ui/core'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useMetaMask } from '../../../functions/metamask/MetamaskContext'
+import { addressTruncator } from '../../../functions/utils'
 
 const useStyles = makeStyles({
     accountButtonStyles: {
@@ -39,7 +40,11 @@ const AccountButton = ({ handleOpen }) => {
     } = useMetaMask()
 
     return (
-        <Button className={classes.accountButtonStyles} onClick={handleOpen}>
+        <Button
+            className={classes.accountButtonStyles}
+            onClick={handleOpen}
+            disabled={Boolean(walletAccount)}
+        >
             <Link href="#">
                 <>
                     <Image
@@ -49,8 +54,7 @@ const AccountButton = ({ handleOpen }) => {
                         height={30}
                     />
                     <a className={classes.accountLink}>
-                        {!walletAccount && 'Connect Wallet'}
-                        {walletAccount && walletAccount}
+                        {!walletAccount ? 'Connect Wallet' : addressTruncator(walletAccount)}
                     </a>
                 </>
             </Link>

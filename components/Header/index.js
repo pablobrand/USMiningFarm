@@ -15,6 +15,10 @@ const useStyles = makeStyles({
         padding: 0
     },
 
+    brandLogo: {
+        cursor: 'pointer'
+    },
+
     headerContainer: {
         padding: '1rem 60px'
     },
@@ -41,7 +45,12 @@ const Header = () => {
                 >
                     <Grid item>
                         <Link href="/">
-                            <Image src="/assets/images/logo.png" width={60} height={60} />
+                            <Image
+                                src="/assets/images/logo.png"
+                                width={60}
+                                height={60}
+                                className={classes.brandLogo}
+                            />
                         </Link>
                     </Grid>
                     <NavList />

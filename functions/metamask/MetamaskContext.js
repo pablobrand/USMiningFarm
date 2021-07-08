@@ -38,18 +38,18 @@ export default function MetaMaskProvider({ children, metamaskData }) {
     }, [])
 
     useEffect(() => {
-        window?.ethereum?.on('accountsChanged', () => {
+        window?.ethereum?.on('accountsChanged', (res = []) => {
             metamaskDispatch({
                 type: 'CHANGE_WALLET_ADDRESS',
-                payload: window?.ethereum?.selectedAddress
+                payload: res.length === 0 ? null : res[0]
             })
         })
 
         return () => {
-            window?.ethereum?.on('accountsChanged', () => {
+            window?.ethereum?.on('accountsChanged', (res = []) => {
                 metamaskDispatch({
                     type: 'CHANGE_WALLET_ADDRESS',
-                    payload: window?.ethereum?.selectedAddress
+                    payload: res.length === 0 ? null : res[0]
                 })
             })
         }
