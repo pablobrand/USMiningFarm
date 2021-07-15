@@ -1,0 +1,9 @@
+.networkText h2, .networkText p {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .networkText p {
+        font-size: 1.25rem
+    }
+}

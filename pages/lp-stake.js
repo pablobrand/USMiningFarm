@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import LPStakeComponent from '../components/LPStake'
+import LPStakeComponent from '../components/LPStakeContainer/LPStakeContainer'
 
 function AllNetwork() {
     return (

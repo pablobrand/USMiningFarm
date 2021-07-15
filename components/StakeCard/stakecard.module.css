@@ -1,0 +1,77 @@
+.stakeCard {
+    max-width: 660px;
+    background-color:#212121;
+    border-radius: 10px;
+}
+
+.stakeCardHeader {
+    padding: 2.75rem 3.4375rem 3.34375rem;
+    border-bottom: 1px solid #707070;
+}
+
+.headerImg {
+    margin-right: 1.9375rem;
+}
+
+.headerText h6 {
+    color: #B33C46;
+}
+
+.stakeCardAmount {
+    padding: 2.15625rem 3.4375rem;
+    border-bottom: 1px solid #707070;
+}
+
+.stakeCardInput {
+    padding: 2.21875rem 3.4375rem;
+}
+
+.stakeCardInput h6 {
+    margin-bottom: 0.75rem;
+}
+
+.inputLabel {
+    width: auto;
+    margin: auto 0 !important;
+    margin-right: 1.875rem !important;
+}
+
+.inputContainer {
+    width: calc(100% - 75px);  
+}
+
+.input {
+    width: 100%;
+    color: #fff;
+    outline: none;
+    font-weight: 600;
+    border: 1px solid hsla(0,0%,86.7%,.34901960784313724);
+    border-radius: 10px;
+    background-color: #3a3a3a;
+    padding: 0.625rem 0.9375rem;
+}
+
+.input input {
+    font-size: 1.5rem !important;
+}
+
+.inputButton {
+    width: 100%;
+    max-width: 473px;
+    background-image: linear-gradient(90deg,#b43838,#b8374d,#b83b61,#b54175,#ae4a87);
+    padding: 0.5rem 3.75rem !important;
+    border-radius: 13px !important;
+    clip-path: polygon(90% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+    margin-top: 2.8125rem !important;
+}
+
+.inputButton span {
+    font-size: 1.8125rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1199px) {
+    .stakeCard {
+        max-width: 100%;
+    }
+}

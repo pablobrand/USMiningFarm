@@ -1,0 +1,26 @@
+.aboutBlurbContainer {
+    background-color: #181818;
+    padding: 2rem 1.4375rem;
+    margin: 0.9375rem 0 !important;
+    border-radius: 30px 10px;
+    box-shadow: 0 0 4px -1px rgb(0 0 0 / 60%);
+}
+
+.aboutBlurbImgContainer {
+    width: 150px;
+    margin-right: 1.4375rem; 
+}
+
+.aboutBlurbTextContainer {
+    width: calc(100% - 150px - 1.4375rem);
+}
+
+@media (max-width: 767px) {
+    .aboutBlurbImgContainer {
+        width: 100px;
+    }
+
+    .aboutBlurbTextContainer {
+        width: calc(100% - 100px - 1.4375rem);
+    }
+}

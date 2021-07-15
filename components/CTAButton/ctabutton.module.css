@@ -1,0 +1,27 @@
+.buttonContainer button {
+    margin-top: 27px;
+    padding-top: 1.6875em;
+    padding-right: 5.4375em;
+    padding-bottom: 1.3125em;
+    padding-left: 2.0625em;
+    border-radius: 12px;
+    clip-path: polygon(80.5% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+}
+
+.buttonText {
+    color: #fff;
+    font-size: 1.8125rem;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .buttonText {
+        font-size: 1.25rem
+    }
+
+    .buttonContainer button {
+        font-size: 8px;
+    }
+}
+

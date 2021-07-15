@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px
+}
+
 body {
     font-family: 'Rajdhani', sans-serif !important;
     width: 100%;
@@ -12,10 +16,15 @@ body {
 
 a {
     text-decoration: none;
-    color: #232323;
     transition: color 0.3s ease;
 }
 
 .sticky {
     background-color: #f7a417 !important;
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 10px
+    }
 }

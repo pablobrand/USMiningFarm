@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import HomeComponent from '../components/Homepage'
-import Footer from '../components/Footer'
+import HomeContainer from '../components/HomeContainer/HomeContainer'
 
 export default function Home() {
     return (
@@ -8,8 +7,8 @@ export default function Home() {
             <Head>
                 <title>USMF</title>
             </Head>
-            <HomeComponent />
-            <Footer />
+            <HomeContainer />
+            {/* <Footer /> */}
         </>
     )
 }

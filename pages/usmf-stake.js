@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import USMFStakeComponent from '../components/USMFStake'
+import USMFStakeComponent from '../components/USMFStakeContainer/USMFStakeContainer'
 
 function USMFStake() {
     return (

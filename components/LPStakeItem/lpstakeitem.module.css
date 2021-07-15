@@ -1,0 +1,65 @@
+.LPStakeItem {
+    background-color: #212121;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.LPStakeItemHeader {
+    padding: 2.75rem 7.84375rem 1.9375rem 3.5625rem;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.headerImg {
+    width: 115px;
+}
+
+.headerValue {
+    width: calc(100% - 115px) !important; 
+}
+
+.LPStakeItemInput {
+    padding: 2.75rem 3.5625rem 1.9375rem ;
+}
+
+.LPStakeItemInput h4 {
+    text-align: center;
+    margin-bottom: 1.625rem
+}
+
+.LPStakeItemInput p {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #757575
+}
+
+.LPStakeItemInput button {
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 0.625rem;
+    margin-bottom: 0.5625rem;
+    border-radius: 9px;
+}
+
+.LPStakeItemInputContainer {
+    margin: 1.5625rem auto 2.4375rem !important;
+    max-width: 476px;
+}
+
+@media (max-width: 1199px) {
+    .LPStakeItemHeader {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991px) {
+    .LPStakeItemHeader {
+        clip-path: unset;
+    }
+
+    .LPStakeItemHeader {
+        padding: 2.75rem 3.5625rem 1.9375rem;
+    }
+}
+

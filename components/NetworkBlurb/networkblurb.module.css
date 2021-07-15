@@ -1,0 +1,28 @@
+.networkBlurbContainer {
+    width: 295px !important;
+}
+
+.networkBlurbImg {
+    background-color: #1b1b1b;
+    padding: 50px;
+    border-radius: 30px 10px;
+}
+
+.networkBlurbText h4 {
+    margin-top: 26px;
+    min-height: 5rem;
+}
+
+.networkBlurbText h4, .networkBlurbText p {
+    text-align: center
+}
+
+@media (max-width: 1124px) {
+    .networkBlurbContainer {
+        width: 100% !important;
+    }
+
+    .networkBlurbText p {
+        margin-bottom: 2rem
+    }
+}
