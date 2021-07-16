@@ -103,22 +103,32 @@
 
 @media (max-width: 991px) {
     .upperFooterContainer {
-        padding: 1rem 24px;
+        padding: 1rem 2rem;
     }
 
     .lowerFooterContainer {
-        padding: 25px 24px;
+        padding: 2rem !important;
     }
 
-    .footerLogoContainer {
-        margin-bottom: 1.5rem;
+    .footerLogo {
+        margin-bottom: 1.5rem !important;
     }
 
     .companyNavListContainer {
-        margin-bottom: 1rem;
+        margin-bottom: 1rem !important;
     }
 
     .getInTouchNavListContainer {
-        margin-bottom: 1rem;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .socialMediaLogoContainer {
+        justify-content: space-evenly;
+    }
+
+    .footerLogoContainer {
+        width: 80px !important;
     }
 }

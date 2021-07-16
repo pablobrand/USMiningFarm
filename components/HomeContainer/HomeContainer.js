@@ -132,7 +132,7 @@ const HomeContainer = () => {
                 <Grid container item component="section" className={classes.aboutContainer}>
                     {/* about section container */}
                     <Grid container item className={classes.aboutContainer}>
-                        <Grid container xs={12} md={6} item className={classes.aboutImgContainer}>
+                        <Grid container xs={12} lg={6} item className={classes.aboutImgContainer}>
                             <Grid item>
                                 <Image
                                     src="/assets/images/about-imag.png"
@@ -141,7 +141,7 @@ const HomeContainer = () => {
                                 />
                             </Grid>
                         </Grid>
-                        <Grid container item xs={12} md={6} className={classes.aboutInfoContainer}>
+                        <Grid container item xs={12} lg={6} className={classes.aboutInfoContainer}>
                             <Grid item className={classes.aboutHeadingContainer}>
                                 <Typography variant="h2">ABOUT USMF</Typography>
                                 <Box className={classes.aboutHeadingLine} />

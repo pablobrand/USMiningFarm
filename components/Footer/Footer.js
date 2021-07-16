@@ -10,10 +10,12 @@ const Footer = () => {
         <>
             <Grid container className={styles.footerContainer} component="footer">
                 <Grid container item className={styles.upperFooterContainer}>
-                    <Grid item xs={12} lg={4} xl={3} className={styles.footerLogoContainer}>
-                        <Image src="/assets/images/footer-logo.png" height={120} width={120} />
+                    <Grid container item xs={12} sm={4} xl={3} className={styles.footerLogo}>
+                        <Grid className={styles.footerLogoContainer}>
+                            <Image src="/assets/images/footer-logo.png" height={120} width={120} />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} lg={4} xl={2} className={styles.companyNavListContainer}>
+                    <Grid item xs={6} sm={4} xl={2} className={styles.companyNavListContainer}>
                         <Link href="#">
                             <Typography variant="h5" className={styles.listItemHeading}>
                                 Company
@@ -62,7 +64,7 @@ const Footer = () => {
                             </ListItem>
                         </List>
                     </Grid>
-                    <Grid item xs={12} lg={4} xl={3} className={styles.getInTouchNavListContainer}>
+                    <Grid item xs={6} sm={4} xl={3} className={styles.getInTouchNavListContainer}>
                         <Link href="#">
                             <Typography variant="h5" className={styles.listItemHeading}>
                                 Get in Touch
@@ -138,7 +140,7 @@ const Footer = () => {
                                 Subscribe{' '}
                             </button>
                         </form>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={1} className={styles.socialMediaLogoContainer}>
                             <Grid item>
                                 <Image src="/assets/images/in.png" width={30} height={30} />
                             </Grid>
