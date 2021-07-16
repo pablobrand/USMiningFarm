@@ -17,6 +17,16 @@ const useStyles = makeStyles({
         minHeight: '255px'
     },
 
+    LPStakeButton: {
+        borderRadius: '34px !important',
+        padding: '0 2.1875rem !important',
+        backgroundImage: 'linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87)',
+        '& span': {
+            fontSize: '2.1875rem !important',
+            fontWeight: 700
+        }
+    },
+
     LPStakeButtonContainer: {
         marginTop: 'auto',
         marginBottom: 'auto',
@@ -50,16 +60,6 @@ const useStyles = makeStyles({
 
     LPStakeItemContainer: {
         maxWidth: '1217px'
-    },
-
-    LPStakeButton: {
-        borderRadius: '34px',
-        padding: '0 2.1875rem',
-        backgroundImage: 'linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87)',
-        '& span': {
-            fontSize: '2.1875rem',
-            fontWeight: 700
-        }
     },
 
     '@media (max-width: 767px)': {
