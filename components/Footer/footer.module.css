@@ -1,0 +1,124 @@
+.footerContainer {
+    background-color: #020202;
+}
+
+.upperFooterContainer {
+    padding: 3rem 60px;
+}
+
+.lowerFooterContainer {
+    border-top: 1px solid #333256;
+    padding: 25px 60px;
+}
+
+.companyNavListContainer {
+    color: #fff;
+    padding-right: 10px;
+}
+
+.listItem {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.listItem p {
+    color: #fff;
+    font-size: 1.3125rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.listItemHeading {
+    color: #fff;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500;
+    font-size: 1.5rem !important;
+}
+
+.listItemIconRoot {
+    min-width: 0 !important;
+    margin-right: 10px;
+}
+
+.newsLetterHeading {
+    color: #fff;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500;
+    font-size: 1.625rem !important;
+    margin-bottom: 1.5625rem !important;
+}
+
+.newsLetterParagraph {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.3125rem !important;
+    line-height: 28px !important;
+    margin-bottom: 2.0625rem !important;
+}
+
+.searchWrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.searchWrapperInput {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 0;
+    background: #fff;
+    border-radius: 40px;
+    border-top-style: none;
+    font-family: "Poppins", sans-serif !important;
+    outline: none !important;
+}
+
+.searchWrapperInput::placeholder {
+    font-size: 1.625rem;
+    margin-top: 10px !important;
+    padding: 0 !important;
+}
+
+.searchWrapperButton {
+    border: 0;
+    padding: 14px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    border-radius: 40px;
+    position: absolute;
+    right: 0;
+    outline: none !important;
+    font-size: 1.625rem;
+    font-family: "Poppins", sans-serif !important;
+}
+
+.creditText {
+    color: #fff;
+}
+
+.lowerFooterLinks, .creditText {
+    color: #fff;
+    font-size: 1.3125rem !important;
+}
+
+@media (max-width: 991px) {
+    .upperFooterContainer {
+        padding: 1rem 24px;
+    }
+
+    .lowerFooterContainer {
+        padding: 25px 24px;
+    }
+
+    .footerLogoContainer {
+        margin-bottom: 1.5rem;
+    }
+
+    .companyNavListContainer {
+        margin-bottom: 1rem;
+    }
+
+    .getInTouchNavListContainer {
+        margin-bottom: 1rem;
+    }
+}

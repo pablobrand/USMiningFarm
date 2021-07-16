@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button, Grid, Typography, makeStyles } from '@material-ui/core'
 import LPStakeItem from '../LPStakeItem/LPStakeItem'
+import useModal from '../../functions/hooks/useModal'
+import DepositModal from '../DepositModal/DepositModal'
 
 const useStyles = makeStyles({
     main: {
@@ -74,6 +76,7 @@ const useStyles = makeStyles({
 })
 
 const LPStakeContainer = () => {
+    const { isOpen, handleClose, handleOpen } = useModal()
     const classes = useStyles()
 
     return (
@@ -81,7 +84,9 @@ const LPStakeContainer = () => {
             <Grid container item component="section" className={classes.banner} />
             <Grid container item component="section" className={classes.LPStakeSection}>
                 <Grid container item className={classes.LPStakeButtonContainer}>
-                    <Button className={classes.LPStakeButton}>LP STAKE</Button>
+                    <Button onClick={handleOpen} className={classes.LPStakeButton}>
+                        LP STAKE
+                    </Button>
                 </Grid>
                 <Grid container item justify="center" className={classes.LPStakeTableContainer}>
                     <Grid container item className={classes.messageContainer}>
@@ -94,10 +99,11 @@ const LPStakeContainer = () => {
                         </Typography>
                     </Grid>
                     <Grid container item className={classes.LPStakeItemContainer}>
-                        <LPStakeItem />
+                        <LPStakeItem handleOpen={handleOpen} />
                     </Grid>
                 </Grid>
             </Grid>
+            <DepositModal isOpen={isOpen} handleClose={handleClose} />
         </Grid>
     )
 }

@@ -1,0 +1,134 @@
+.mobileMenuToggle {
+    display: none;
+    border: 1px solid;
+    border-color: hsla(0,0%,100%,.1);
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border-radius: .25rem;
+    color: hsla(0,0%,100%,.5);
+    z-index: 100;
+}
+
+.mobileMenuToggleIcon {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    background: 50%/100% 100% no-repeat;
+    width: 24px;
+    height: 17px;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    transition: all .3s linear;
+    background-image: none;
+}
+
+.mobileMenuToggleIcon:after,
+.mobileMenuToggleIcon:before {
+    width: 24px;
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 2;
+    transition: all 300ms linear;
+}
+
+.mobileMenuToggle[aria-expanded="true"] .mobileMenuToggleIcon:after {
+    transform: rotate(45deg);
+}
+
+.mobileMenuToggle[aria-expanded="true"] .mobileMenuToggleIcon:before {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.mobileMenuToggle[aria-expanded="true"] .mobileMenuToggleIcon {
+    border-color: transparent;
+}
+
+.mobileMenuToggleIcon:after {
+    top: 8px;
+}
+
+.active {
+    width: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #b43838, #b8374d, #b83b61, #b54175, #ae4a87);
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobileNavButton {
+    width: 100%;
+}
+
+.mobileNavItem {
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.mobileMenu {
+    display: block;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    top: 0;
+}
+
+.mobileMenuShow {
+    display: block !important;
+    width: 100%;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    transform: translateY(25px);
+}
+
+@media (max-width: 991px) {
+    .mobileMenu {
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #f7a417;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .mobileMenuShow {
+        position: absolute;
+        right: 0;
+        left: 0;
+        background-color: #f7a417;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .mobileMenuContainer {
+        display: block;
+        width: 100%;
+        position: relative;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    .mobileNavListContainer {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .mobileMenuToggle {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobileMenuContainer {
+        display: none !important;
+    }
+}
+

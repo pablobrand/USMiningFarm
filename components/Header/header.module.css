@@ -1,0 +1,25 @@
+.appBar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: all .3s ease-out !important;
+    padding: 0;
+    outline: 0;
+}
+
+.brandLogo {
+    cursor: 'pointer';
+}
+
+.headerContainer {
+    padding: 1rem 3.75rem;
+}
+
+@media (max-width: 767px) {
+    .headerContainer {
+        padding: 1rem 1.5rem;
+    }
+
+    .headerImgContainer {
+        width: 80px;
+    }
+}

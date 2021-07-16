@@ -1,0 +1,25 @@
+.accountButtonStyles{
+    background-color: #3f3f3f !important;
+    font-family: inherit !important;
+    color: #fff !important;
+    padding: 16px 26px !important;
+    border-radius: 50px !important;
+    border: none !important;
+    text-align: center;
+}
+
+.accountLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 8px;
+}
+
+@media (max-width: 991px) {
+    .accountButtonStyles {
+        display: none !important;
+    }
+}

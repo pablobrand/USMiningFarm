@@ -50,12 +50,14 @@ const USMFTableItem = ({
             <TableCell className={styles.tableBodyFirstCell}>
                 <Grid container>
                     <Image src="/assets/images/logo.png" height={80} width={80} />
-                    <Typography variant="h6" className={styles.type} component="h3">
-                        TYPE {type}
+                    <Grid>
+                        <Typography variant="h6" className={styles.type} component="h3">
+                            TYPE {type}
+                        </Typography>
                         <Typography variant="h5" className={styles.typeValue}>
                             0M {Number(initialCurrentTotalStake).toFixed(2)}
                         </Typography>
-                    </Typography>
+                    </Grid>
                 </Grid>
             </TableCell>
             <TableCell className={styles.tableBodyCell}>

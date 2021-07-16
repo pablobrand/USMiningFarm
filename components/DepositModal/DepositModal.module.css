@@ -1,0 +1,83 @@
+.modalContainer {
+    padding: 1rem;
+    transition: opacity .15s linear !important;
+}
+
+.modalHeader {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.modalClose {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    color: #fff;
+    opacity: .5;
+}
+
+.modalClose:hover {
+    opacity: .7;
+}
+
+.modalBody {
+    width: 100%;
+    color: #fff;
+    padding: 0 7.3125rem 2rem;
+}
+
+.modalImg {
+    margin-bottom: 1rem;
+}
+
+.modalBody h2 {
+    text-align: center;
+    margin-bottom: 2.3125rem;
+}
+
+.modalInput {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 2.9375rem 3.625rem;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    background-color: #7a2f4b;
+    font-weight: 700;
+}
+
+.modalInput, .modalInput::placeholder {
+    font-size: 1.75rem;
+    font-family: inherit;
+    color: #fff;
+}
+
+.reviewButton {
+    width: 95%;
+    background-color: #fdc600;
+    outline: none;
+    padding: 2.625rem 25px;
+    border-radius: 10px;
+    margin: 0.5rem auto;
+    border: 0;
+    font-size: 2.1875rem;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.arrow {
+    margin: 2rem auto;
+}
+
+@media (max-width: 767px) {
+    .modalBody {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .modalImg {
+        width: 125px;
+    }
+}

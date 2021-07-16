@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         backgroundImage: "url('/assets/images/banner.png')",
         backgroundPosition: '80%',
         backgroundRepeat: 'no-repeat',
-        padding: '0 60px',
+        padding: '150px 60px',
         minHeight: '59.0625rem'
     },
 
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
 
     '@media (max-width: 767px)': {
         heroSection: {
-            padding: '0 24px'
+            padding: '120px 24px 30px'
         },
 
         networkSection: {
@@ -67,7 +67,7 @@ const useStyles = makeStyles({
         }
     },
 
-    '@media (min-width: 1921px)': {
+    '@media (min-width: 768px)': {
         heroSection: {
             backgroundSize: 'cover'
         }

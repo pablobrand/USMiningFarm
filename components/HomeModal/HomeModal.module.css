@@ -1,0 +1,91 @@
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: opacity .15s linear !important;
+}
+
+.modalHeader {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.modalClose {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    color: #fff;
+    opacity: .5;
+}
+
+.modalClose:hover {
+    opacity: .7;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 0 7.3125rem 2rem;
+}
+
+.modalBody h1 {
+    font-weight: 700;
+    line-height: 67px;
+    margin-bottom: 0.375rem;
+}
+
+.modalBody p {
+    line-height: 30px;
+    margin-bottom: 3.125rem;
+}
+
+.modalImg {
+    margin-bottom: 1rem;
+}
+
+.metamaskButton {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.metamaskButton img {
+    max-width: 496px;
+    width: 100%;
+    margin-bottom: 2.625rem;
+}
+
+.helpLink, .helpLink:hover {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .modalImgContainer {
+        width: 200px;
+    }
+
+    .metamaskButton img {
+        max-width: 200px;
+        margin-bottom: 0;
+    }
+
+    .modalBody p {
+        line-height: 30px;
+        margin-bottom: 1rem;
+    }
+}
