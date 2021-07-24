@@ -1,8 +1,29 @@
+import { useQuery } from '@apollo/client'
 import { Grid, Typography, Button } from '@material-ui/core'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import { UNISWAP_ADDRESS } from '../../functions/apollo/addresses'
+import { COIN_QUERY } from '../../functions/apollo/queries'
 import styles from './lpstakeitem.module.css'
 
-const LPStakeItem = ({ handleOpen }) => {
+const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null }) => {
+    const [coinPriceInUSD, setCoinPriceInUSD] = useState(null)
+    const { loading: uniswapLoading, data: coinData } = useQuery(COIN_QUERY, {
+        variables: {
+            tokenAddress: UNISWAP_ADDRESS
+        },
+        pollInterval: 60000,
+        fetchPolicy: 'cache-and-network'
+    })
+
+    useEffect(() => {
+        if (!uniswapLoading && !ethPriceLoading) {
+            const price = (
+                parseFloat(coinData.tokens[0].derivedETH) * parseFloat(ethData.bundle.ethPrice)
+            ).toFixed(2)
+            setCoinPriceInUSD(price)
+        }
+    }, [uniswapLoading, ethPriceLoading])
     return (
         <Grid container item className={styles.LPStakeItem}>
             <Grid container item className={styles.LPStakeItemContainer}>
@@ -16,7 +37,9 @@ const LPStakeItem = ({ handleOpen }) => {
                         </Typography>
                     </Grid>
                     <Grid container item className={styles.headerValue}>
-                        <Typography variant="h3">$54,934</Typography>
+                        <Typography variant="h3">
+                            {coinPriceInUSD && `$${coinPriceInUSD}`}
+                        </Typography>
                     </Grid>
                 </Grid>
                 <Grid

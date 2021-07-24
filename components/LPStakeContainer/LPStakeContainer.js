@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Button, Grid, Typography, makeStyles } from '@material-ui/core'
+import { useQuery } from '@apollo/client'
 import LPStakeItem from '../LPStakeItem/LPStakeItem'
 import useModal from '../../functions/hooks/useModal'
 import DepositModal from '../DepositModal/DepositModal'
+import { ETH_PRICE_QUERY } from '../../functions/apollo/queries'
 
 const useStyles = makeStyles({
     main: {
@@ -78,7 +80,10 @@ const useStyles = makeStyles({
 const LPStakeContainer = () => {
     const { isOpen, handleClose, handleOpen } = useModal()
     const classes = useStyles()
-
+    const { loading: ethPriceLoading, data: ethData } = useQuery(ETH_PRICE_QUERY, {
+        fetchPolicy: 'cache-and-network',
+        pollInterval: 60000
+    })
     return (
         <Grid container component="main" className={classes.main}>
             <Grid container item component="section" className={classes.banner} />
@@ -99,7 +104,11 @@ const LPStakeContainer = () => {
                         </Typography>
                     </Grid>
                     <Grid container item className={classes.LPStakeItemContainer}>
-                        <LPStakeItem handleOpen={handleOpen} />
+                        <LPStakeItem
+                            handleOpen={handleOpen}
+                            ethPriceLoading={ethPriceLoading}
+                            ethData={ethData}
+                        />
                     </Grid>
                 </Grid>
             </Grid>
