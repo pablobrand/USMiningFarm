@@ -2,30 +2,36 @@ import { useQuery } from '@apollo/client'
 import { Grid, Typography, Button } from '@material-ui/core'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { UNISWAP_ADDRESS } from '../../functions/apollo/addresses'
 import { COIN_QUERY } from '../../functions/apollo/queries'
 import styles from './lpstakeitem.module.css'
 
-const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null }) => {
+const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null, token = null }) => {
     const [coinPriceInUSD, setCoinPriceInUSD] = useState(null)
-    const { loading: uniswapLoading, data: coinData } = useQuery(COIN_QUERY, {
+    const { loading: tokenLoading, data: coinData } = useQuery(COIN_QUERY, {
         variables: {
-            tokenAddress: UNISWAP_ADDRESS
+            tokenAddress: token?.address || ''
         },
         pollInterval: 60000,
         fetchPolicy: 'cache-and-network'
     })
 
     useEffect(() => {
-        if (!uniswapLoading && !ethPriceLoading) {
+        if (!tokenLoading && !ethPriceLoading) {
             const price = (
                 parseFloat(coinData.tokens[0].derivedETH) * parseFloat(ethData.bundle.ethPrice)
             ).toFixed(2)
             setCoinPriceInUSD(price)
         }
-    }, [uniswapLoading, ethPriceLoading])
+    }, [tokenLoading, ethPriceLoading])
     return (
-        <Grid container item className={styles.LPStakeItem}>
+        <Grid
+            container
+            item
+            className={styles.LPStakeItem}
+            style={{
+                marginBottom: '0.5rem'
+            }}
+        >
             <Grid container item className={styles.LPStakeItemContainer}>
                 <Grid container item lg={5} className={styles.LPStakeItemHeader}>
                     <Grid container direction="column" className={styles.headerImg}>
@@ -33,7 +39,7 @@ const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null }) => 
                             <Image src="/assets/images/logo.png" height={86} width={86} />
                         </Grid>
                         <Typography variant="h6" style={{ fontSize: '1.6875rem' }}>
-                            UNISWAP
+                            {token?.coin}
                         </Typography>
                     </Grid>
                     <Grid container item className={styles.headerValue}>

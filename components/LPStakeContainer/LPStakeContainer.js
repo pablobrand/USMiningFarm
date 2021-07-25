@@ -5,6 +5,7 @@ import LPStakeItem from '../LPStakeItem/LPStakeItem'
 import useModal from '../../functions/hooks/useModal'
 import DepositModal from '../DepositModal/DepositModal'
 import { ETH_PRICE_QUERY } from '../../functions/apollo/queries'
+import tokens from '../../functions/coins/addresses'
 
 const useStyles = makeStyles({
     main: {
@@ -104,11 +105,15 @@ const LPStakeContainer = () => {
                         </Typography>
                     </Grid>
                     <Grid container item className={classes.LPStakeItemContainer}>
-                        <LPStakeItem
-                            handleOpen={handleOpen}
-                            ethPriceLoading={ethPriceLoading}
-                            ethData={ethData}
-                        />
+                        {tokens.map((token) => (
+                            <LPStakeItem
+                                key={token.coin}
+                                handleOpen={handleOpen}
+                                ethPriceLoading={ethPriceLoading}
+                                ethData={ethData}
+                                token={token}
+                            />
+                        ))}
                     </Grid>
                 </Grid>
             </Grid>
