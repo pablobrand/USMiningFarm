@@ -36,10 +36,16 @@ const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null, token
                 <Grid container item lg={5} className={styles.LPStakeItemHeader}>
                     <Grid container direction="column" className={styles.headerImg}>
                         <Grid>
-                            <Image src="/assets/images/logo.png" height={86} width={86} />
+                            <Image
+                                loader={({ src }) => src}
+                                src={token?.logo}
+                                height={86}
+                                width={86}
+                                alt="token logo"
+                            />
                         </Grid>
                         <Typography variant="h6" style={{ fontSize: '1.6875rem' }}>
-                            {token?.coin}
+                            {coinData?.tokens[0]?.symbol}
                         </Typography>
                     </Grid>
                     <Grid container item className={styles.headerValue}>
@@ -75,3 +81,4 @@ const LPStakeItem = ({ handleOpen, ethPriceLoading = true, ethData = null, token
 }
 
 export default LPStakeItem
+// "/assets/images/logo.png"

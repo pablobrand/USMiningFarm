@@ -5,6 +5,7 @@ export const COIN_QUERY = gql`
         tokens(where: { id: $tokenAddress }) {
             derivedETH
             totalLiquidity
+            symbol
         }
     }
 `
