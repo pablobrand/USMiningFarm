@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './HomeModal.module.css'
 import { useMetaMask } from '../../functions/metamask/MetamaskContext'
-import { metamaskHandler } from '../../functions/metamask/metamask'
+import { isMetamaskInstalled, metamaskHandler } from '../../functions/metamask/metamask'
 import StyledDialog from '../StyledDialog/StyledDialog'
 import useOnStateUpdate from '../../functions/hooks/useOnStateUpdate'
 
@@ -34,9 +34,9 @@ const HomeModal = ({ isOpen, handleClose }) => {
             type: 'DISCONNECT',
             payload: !disconnected
         })
-        metamaskHandler(metamaskState.isMetamaskInstalled, disconnected, connectMetamaskCb)
+        metamaskHandler(isMetamaskInstalled(), disconnected, connectMetamaskCb)
 
-        if (!metamaskState.isMetamaskInstalled) {
+        if (!isMetamaskInstalled()) {
             setIsInstalling(true)
         }
     }

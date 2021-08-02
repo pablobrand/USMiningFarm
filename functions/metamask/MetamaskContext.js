@@ -1,7 +1,5 @@
 import { useRef, createContext, useContext, useEffect, useReducer } from 'react'
 import cookie from '../cookies'
-
-import { isMetamaskInstalled } from './metamask'
 import { metamaskInitialState, metamaskReducer } from './metamaskStore'
 
 const MetaMask = createContext()
@@ -37,15 +35,6 @@ export default function MetaMaskProvider({ children, metamaskData }) {
         })
         return () => {}
     }, [metamaskState])
-
-    useEffect(() => {
-        if (!metamaskData?.isMetamaskInstalled) {
-            metamaskDispatch({
-                type: 'METAMASK_INSTALLED',
-                payload: isMetamaskInstalled()
-            })
-        }
-    }, [])
 
     useEffect(() => {
         window?.ethereum?.on('accountsChanged', (res = []) => {
