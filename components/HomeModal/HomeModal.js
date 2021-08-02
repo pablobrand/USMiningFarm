@@ -21,13 +21,20 @@ const HomeModal = ({ isOpen, handleClose }) => {
 
     useOnStateUpdate([metamaskState], stateUpdateHandler)
 
+    const connectMetamaskCb = (walletAddress = '') => {
+        metamaskDispatch({
+            type: 'CHANGE_WALLET_ADDRESS',
+            payload: walletAddress
+        })
+    }
+
     const connectMetamask = () => {
         const { disconnected } = metamaskState
         metamaskDispatch({
             type: 'DISCONNECT',
             payload: !disconnected
         })
-        metamaskHandler(metamaskState.isMetamaskInstalled, disconnected)
+        metamaskHandler(metamaskState.isMetamaskInstalled, disconnected, connectMetamaskCb)
 
         if (!metamaskState.isMetamaskInstalled) {
             setIsInstalling(true)
