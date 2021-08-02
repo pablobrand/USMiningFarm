@@ -2,6 +2,7 @@
 export const metamaskInitialState = {
     isMetamaskInstalled: false,
     walletAccount: null,
+    disconnected: false,
     stakeCardDetails: {
         typeId: 'Type 1',
         typeName: 'OM - STAKING',
@@ -24,6 +25,11 @@ export const metamaskReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 walletAccount: payload
+            }
+        case 'DISCONNECT':
+            return {
+                ...state,
+                disconnected: payload
             }
         default:
             return state

@@ -12,22 +12,36 @@ const installMetamask = () => {
     onboarding.startOnboarding()
 }
 
-const metamaskConnect = async () => {
+const metamaskConnect = async (disconnected = false) => {
     try {
         const { ethereum } = window
-        await ethereum.request({
-            method: 'eth_requestAccounts'
-        })
+        if (!disconnected) {
+            const res = await ethereum.request({
+                method: 'eth_requestAccounts'
+            })
+            localStorage.setItem('walletAddress', res[0])
+        }
+
+        if (disconnected) {
+            await ethereum.request({
+                method: 'wallet_requestPermissions',
+                params: [
+                    {
+                        eth_accounts: {}
+                    }
+                ]
+            })
+        }
     } catch (error) {
         // eslint-disable-next-line no-console
         console.error(error)
     }
 }
 
-export const metamaskHandler = (isInstalled = false) => {
+export const metamaskHandler = (isInstalled = false, disconnected = false) => {
     if (!isInstalled) {
         return installMetamask()
     }
 
-    return metamaskConnect()
+    return metamaskConnect(disconnected)
 }

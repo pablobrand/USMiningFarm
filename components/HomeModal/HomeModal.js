@@ -11,7 +11,7 @@ import useOnStateUpdate from '../../functions/hooks/useOnStateUpdate'
 
 const HomeModal = ({ isOpen, handleClose }) => {
     const [isInstalling, setIsInstalling] = useState(false)
-    const { metamaskState } = useMetaMask()
+    const { metamaskState, metamaskDispatch } = useMetaMask()
 
     const stateUpdateHandler = () => {
         if (metamaskState.walletAccount) {
@@ -20,6 +20,19 @@ const HomeModal = ({ isOpen, handleClose }) => {
     }
 
     useOnStateUpdate([metamaskState], stateUpdateHandler)
+
+    const connectMetamask = () => {
+        const { disconnected } = metamaskState
+        metamaskDispatch({
+            type: 'DISCONNECT',
+            payload: !disconnected
+        })
+        metamaskHandler(metamaskState.isMetamaskInstalled, disconnected)
+
+        if (!metamaskState.isMetamaskInstalled) {
+            setIsInstalling(true)
+        }
+    }
 
     return (
         <>
@@ -50,12 +63,7 @@ const HomeModal = ({ isOpen, handleClose }) => {
                         <button
                             type="button"
                             className={styles.metamaskButton}
-                            onClick={() => {
-                                metamaskHandler(metamaskState.isMetamaskInstalled)
-                                if (!metamaskState.isMetamaskInstalled) {
-                                    setIsInstalling(true)
-                                }
-                            }}
+                            onClick={connectMetamask}
                         >
                             {!isInstalling && <img src="assets/images/metamask.png" alt="" />}
                             {isInstalling && <h1>Installing...</h1>}

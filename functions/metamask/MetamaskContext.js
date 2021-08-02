@@ -20,8 +20,18 @@ export default function MetaMaskProvider({ children, metamaskData }) {
     useEffect(() => {
         if (!isMounted.current) {
             isMounted.current = true
+            if (localStorage.getItem('walletAddress')) {
+                metamaskDispatch({
+                    type: 'CHANGE_WALLET_ADDRESS',
+                    payload: localStorage.getItem('walletAddress')
+                        ? localStorage.getItem('walletAddress')
+                        : null
+                })
+            }
+
             return () => {}
         }
+
         cookie.set('metamaskData', metamaskState, {
             maxAge: 604800
         })
@@ -44,7 +54,6 @@ export default function MetaMaskProvider({ children, metamaskData }) {
                 payload: res.length === 0 ? null : res[0]
             })
         })
-
         return () => {
             window?.ethereum?.on('accountsChanged', (res = []) => {
                 metamaskDispatch({
@@ -54,6 +63,7 @@ export default function MetaMaskProvider({ children, metamaskData }) {
             })
         }
     }, [])
+
     return (
         <MetaMask.Provider
             value={{
